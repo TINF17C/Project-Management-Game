@@ -1,1 +1,1 @@
-ich bin für ne Projektnamensänderun
+ich bin für ne Projektnamensänderung
