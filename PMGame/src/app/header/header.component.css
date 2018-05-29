@@ -1,3 +1,13 @@
 .matButton {
-    margin-left: 5vw;
+    align: center;
+    padding: inherit;
+    margin-left: 1%
+}
+
+buttons{
+    
+}
+
+.title-center{
+    align-content: center
 }
