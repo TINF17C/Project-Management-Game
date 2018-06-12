@@ -1,8 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-header></app-header>
-<div>
-  <h1>Hi all</h1>
-</div>
-<app-footer id="footer" width="100%"></app-footer>
+<div id="app" class="root__container">
 
-<router-outlet></router-outlet>
+  <app-header></app-header>
+
+  <div id="view">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer id="footer"></app-footer>
+
+</div>
