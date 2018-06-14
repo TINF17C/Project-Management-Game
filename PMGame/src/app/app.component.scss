@@ -1,8 +1,4 @@
 #app {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
   // sticky footer
   display: flex;
   min-height: 100vh;
@@ -12,9 +8,6 @@
 .root__container {
   width: 100vw;
   position: relative;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 0.5fr auto;
 }
 
 #view {
@@ -23,8 +16,4 @@
   // Sticky footer
   flex: 1;
   align-self: center;
-  // background: url("../assets/home__background.svg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center center;
 }

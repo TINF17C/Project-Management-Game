@@ -1,9 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app-theme';
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~@angular/material/theming';
-@import './app-theme';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Reset
 
 body {
   padding: 0;
   margin: 0;
+  color: #2c3e50;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+// Normalizers
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html * {
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
