@@ -9,17 +9,28 @@ import { CommonModule } from '@angular/common';
 // Declares the Material Modules we want to use
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
     imports: [
         MatToolbarModule,
-        MatButtonModule
+        MatButtonModule,
+        MatCardModule,
+        MatProgressBarModule,
+        MatIconModule,
+        MatListModule
     ],
     exports: [
         MatToolbarModule,
-        MatButtonModule
+        MatButtonModule,
+        MatCardModule,
+        MatProgressBarModule,
+        MatIconModule,
+        MatListModule
     ]
 })
 export class MaterialModule {}
