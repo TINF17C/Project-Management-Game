@@ -1,0 +1,38 @@
+#main__view {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    'player1 question'
+    'player2 question'
+    'player3 question'
+    'player4 question'
+    'progress progress';
+  width: 100vw;
+  height: 100%;
+}
+
+#player1 {
+  grid-area: player1;
+}
+
+#player2 {
+  grid-area: player2;
+}
+
+#player3 {
+  grid-area: player3;
+}
+
+#player4 {
+  grid-area: player4;
+}
+
+#question {
+  grid-area: question;
+}
+
+#progress {
+  grid-area: progress;
+}
