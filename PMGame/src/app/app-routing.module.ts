@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'impressum',
     component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: HomeComponent
   }
 ];
 

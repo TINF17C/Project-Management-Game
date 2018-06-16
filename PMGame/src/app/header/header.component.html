@@ -1,6 +1,11 @@
 <mat-toolbar class="mat-elevation-z2" color="primary">
   <span>Projektmanagement</span>
-  <button mat-raised-button class="matButton" routerLink=""><mat-icon>home</mat-icon></button>
-  <button mat-raised-button class="matButton" routerLink="/game">Spiel</button>
-  <button mat-raised-button class="matButton" routerLink="/rules">Regeln</button>
+  <div class="header-left">
+    <button mat-raised-button class="matButton" routerLink=""><mat-icon>home</mat-icon></button>
+    <button mat-raised-button class="matButton" routerLink="/game">Spiel</button>
+    <button mat-raised-button class="matButton" routerLink="/rules">Regeln</button>
+  </div>
+  <div class="header-right">
+    <button mat-raised-button routerLink="/about">About</button>
+  </div>
 </mat-toolbar>
