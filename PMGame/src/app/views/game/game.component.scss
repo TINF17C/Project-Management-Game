@@ -1,16 +1,21 @@
+$width: 100vw;
+$height: 100%;
+$primary: #3f51b5;
+
 #main__view {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr;
+  grid-template-rows: repeat(auto-fit, minmax(1fr));
   grid-gap: 10px;
   grid-template-areas:
-    'player1 question'
-    'player2 question'
-    'player3 question'
-    'player4 question'
+    'player1 quiz'
+    'player2 quiz'
+    'player3 quiz'
+    'player4 quiz'
     'progress progress';
-  width: 100vw;
-  height: 100%;
+  max-width: $width;
+  width: $width;
+  height: $height;
 }
 
 #player1 {
@@ -29,10 +34,61 @@
   grid-area: player4;
 }
 
-#question {
-  grid-area: question;
+#quiz {
+  grid-area: quiz;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+#quiz__header {
+  text-align: center;
+  border-bottom: 1px solid #6978c99f;
+  margin: 2rem auto;
+}
+
+#quiz__options {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+
+.quiz__options-radio-button {
+  padding: 10px;
+}
+
+#quiz__option > * {
+  padding: 1rem;
+}
+
+#quiz__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
 }
 
 #progress {
   grid-area: progress;
+  position: relative;
+  max-width: $width;
+}
+
+#progress__header {
+  display: flex;
+  flex-direction: row;
+}
+
+.progress__header-title {
+  margin: 1rem 0;
+  margin-right: $width/10;
+}
+
+.progress__header--rotate {
+  transform: rotate(-45deg);
+}
+
+.progress__header--bold {
+  font-size: 150%;
+  font-weight: 600;
+  color: $primary;
 }
