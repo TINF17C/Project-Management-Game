@@ -1,0 +1,32 @@
+.player-container {
+  width: 100%;
+}
+.palyer-progressBar {
+  margin-top: 3vh;
+}
+.player-content-left {
+  width: 69%;
+  display: inline-block;
+  margin-right: 1%;
+}
+.player-content-right {
+  width: 29%;
+  height: 100%;
+  padding-left: 1%;
+  display: inline-block;
+  border-left: 1px solid black;
+}
+.player-money-information {
+  margin-bottom: 0;
+}
+.material-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  padding-bottom: 4px;
+}
+.player-bank {
+  margin-right: 4vw;
+  margin-left: 1vw;
+}

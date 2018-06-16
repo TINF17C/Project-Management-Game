@@ -1,12 +1,12 @@
 $width: 100vw;
 $height: 100%;
+$progress-width: 70vw;
 $primary: #3f51b5;
 
 #main__view {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(auto-fit, minmax(1fr));
-  grid-gap: 10px;
   grid-template-areas:
     'player1 quiz'
     'player2 quiz'
@@ -70,24 +70,30 @@ $primary: #3f51b5;
 #progress {
   grid-area: progress;
   position: relative;
-  max-width: $width;
+  width: 100%;
+  max-width: 100%;
 }
 
-#progress__header {
+#progress__content {
+  // width: $progress-width;
+}
+
+#progress__titles {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
-.progress__header-title {
+.progress__titles-title {
   margin: 1rem 0;
   margin-right: $width/10;
 }
 
-.progress__header--rotate {
+.progress__titles--rotate {
   transform: rotate(-45deg);
 }
 
-.progress__header--bold {
+.progress__titles--bold {
   font-size: 150%;
   font-weight: 600;
   color: $primary;

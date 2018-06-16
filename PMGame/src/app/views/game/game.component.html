@@ -1,12 +1,10 @@
 <div id="main__view">
   <div id="player1">
-
+    <app-player></app-player>
   </div>
   <div id="player2">
-
   </div>
   <div id="player3">
-
   </div>
   <div id="player4">
 
@@ -38,15 +36,15 @@
   </div>
   <div id="progress">
     <mat-card>
-      <mat-card-content>
-        <section id="progress__header" class="overlay">
-          <div class="progress__header-title progress__header--rotate">
+      <mat-card-content id="progress__content">
+        <section id="progress__titles">
+          <div class="progress__titles-title progress__titles--rotate">
             Start
           </div>
-          <div class="progress__header-title progress__header--rotate" *ngFor="let stage of stages" [ngClass]="{'progress__header--bold': currentStage === stage.value}">
+          <div class="progress__titles-title progress__titles--rotate" *ngFor="let stage of stages" [ngClass]="{'progress__titles--bold': currentStage === stage.value}">
             {{ stage.name }}
           </div>
-          <div class="progress__header--rotate">
+          <div class="progress__titles--rotate">
             End
           </div>
         </section>
