@@ -1,58 +1,60 @@
-<div id="main__view">
-  <div id="player1">
-    <app-player></app-player>
-  </div>
-  <div id="player2">
-  </div>
-  <div id="player3">
-  </div>
-  <div id="player4">
+<div id="main__view_container">
+  <div id="main__view">
+    <div id="player1">
+      <app-player></app-player>
+    </div>
+    <div id="player2">
+    </div>
+    <div id="player3">
+    </div>
+    <div id="player4">
 
-  </div>
-  <div id="quiz">
-    <mat-card>
-      <mat-card-content>
-        <div id="quiz__header">
-          <h2>Quiz</h2>
-        </div>
-
-        <div id="quiz__question">
-          {{ question.question }}
-        </div>
-
-        <mat-radio-group id="quiz__options" [(ngModel)]="selectedAnswer">
-          <mat-radio-button class="quiz__options-radio-button" *ngFor="let option of question.options" [value]="option">
-            {{ option }}
-          </mat-radio-button>
-        </mat-radio-group>
-
-        <div id="quiz__buttons">
-          <button mat-button mat-raised-button color="primary">Bestechen</button>
-          <button mat-button mat-raised-button color="primary">OK</button>
-        </div>
-
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div id="progress">
-    <mat-card>
-      <mat-card-content id="progress__content">
-        <section id="progress__titles">
-          <div class="progress__titles-title progress__titles--rotate">
-            Start
+    </div>
+    <div id="quiz">
+      <mat-card>
+        <mat-card-content>
+          <div id="quiz__header">
+            <h2>Quiz</h2>
           </div>
-          <div class="progress__titles-title progress__titles--rotate" *ngFor="let stage of stages" [ngClass]="{'progress__titles--bold': currentStage === stage.value}">
-            {{ stage.name }}
+
+          <div id="quiz__question">
+            {{ question.question }}
           </div>
-          <div class="progress__titles--rotate">
-            End
+
+          <mat-radio-group id="quiz__options" [(ngModel)]="selectedAnswer">
+            <mat-radio-button class="quiz__options-radio-button" *ngFor="let option of question.options" [value]="option">
+              {{ option }}
+            </mat-radio-button>
+          </mat-radio-group>
+
+          <div id="quiz__buttons">
+            <button mat-button mat-raised-button color="primary">Bestechen</button>
+            <button mat-button mat-raised-button color="primary">OK</button>
           </div>
-        </section>
-        <section>
-          <mat-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="value">
-          </mat-progress-bar>
-        </section>
-      </mat-card-content>
-    </mat-card>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div id="progress">
+      <mat-card>
+        <mat-card-content id="progress__content">
+          <section id="progress__titles">
+            <div class="progress__titles-title progress__titles--rotate">
+              Start
+            </div>
+            <div class="progress__titles-title progress__titles--rotate" *ngFor="let stage of stages" [ngClass]="{'progress__titles--bold': currentStage === stage.value}">
+              {{ stage.name }}
+            </div>
+            <div class="progress__titles--rotate">
+              End
+            </div>
+          </section>
+          <section>
+            <mat-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="value">
+            </mat-progress-bar>
+          </section>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>
