@@ -11,6 +11,10 @@ body {
   color: #2c3e50;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   line-height: 1.6;
+
+  background: url('./assets/home__background.svg');
+  background-size: cover;
+  background-position: center;
 }
 
 // Normalizers
