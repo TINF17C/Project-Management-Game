@@ -11,21 +11,27 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   imports: [
     MatToolbarModule,
     MatButtonModule,
-    MatProgressBarModule,
     MatCardModule,
+    MatProgressBarModule,
+    MatIconModule,
+    MatListModule,
     MatRadioModule
   ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
-    MatProgressBarModule,
     MatCardModule,
+    MatProgressBarModule,
+    MatIconModule,
+    MatListModule,
     MatRadioModule
   ]
 })
