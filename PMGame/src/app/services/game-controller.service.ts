@@ -83,7 +83,7 @@ export class GameControllerService {
     for (let i = 0; i < playerCount; i++) {
       players.push({
         id: i,
-        player: 'Spieler ' + i,
+        player: 'Spieler ' + (i + 1),
         title: Jobtitles[0],
         titleCode: 0,
         money: 0,
