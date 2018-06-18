@@ -74,15 +74,16 @@ export class GameControllerService {
   }
 
   /**
+   * Creates Player Objects
    *
    * @param playerCount count of player to be initiated
    */
   initNewPlayers(playerCount: number): IPlayer[] {
     const players = [];
-    for (let i = 0; i <= playerCount; i++) {
+    for (let i = 0; i < playerCount; i++) {
       players.push({
         id: i,
-        player: 'Player' + i,
+        player: 'Spieler ' + i,
         title: Jobtitles[0],
         titleCode: 0,
         money: 0,
