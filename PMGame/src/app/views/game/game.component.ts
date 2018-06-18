@@ -9,10 +9,16 @@ import { Stages } from '../../shared/stages.enums';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  // player
+  // game object
+  game = {
+    stage: 0,
+    progress: 0
+  };
+
+  // player objects
   players: IPlayer[];
 
-  // progress bar
+  // progress bar view
   color = 'primary';
   mode = 'determinate';
   progressBarValue: number;
@@ -38,5 +44,7 @@ export class GameComponent implements OnInit {
   hey() {
     this.controller.changePlayerTitle(this.players[2], 7);
   }
-  du() {}
+  dd() {
+    this.controller.incrementStageCount(this.game);
+  }
 }

@@ -14,10 +14,11 @@ export enum Stages {
 export namespace Stages {
   export function keys(): Array<string> {
     const keyArray = Object.keys(Stages);
-    return keyArray.slice(keyArray.length / 2, keyArray.length - 1);
+    return keyArray.slice(keyArray.length / 2 - 1, keyArray.length - 2);
   }
 
   export function length(): number {
-    return Object.keys(Stages).length / 2 + 1;
+    console.log(Object.keys(Stages).length / 2 - 1);
+    return Object.keys(Stages).length / 2 - 2;
   }
 }
