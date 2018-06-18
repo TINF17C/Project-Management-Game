@@ -21,7 +21,6 @@ export class GameComponent implements OnInit {
   // progress bar view
   color = 'primary';
   mode = 'determinate';
-  progressBarValue: number;
 
   currentStage: number;
   stages = Stages.keys();
@@ -39,12 +38,5 @@ export class GameComponent implements OnInit {
 
   initPlayers(playerCount: number): void {
     this.players = this.controller.initNewPlayers(playerCount);
-  }
-
-  hey() {
-    this.controller.changePlayerTitle(this.players[2], 7);
-  }
-  dd() {
-    this.controller.incrementStageCount(this.game);
   }
 }
