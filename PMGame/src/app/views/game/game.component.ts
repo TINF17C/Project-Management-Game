@@ -1,4 +1,9 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  AfterContentChecked
+} from '@angular/core';
 import { IQuestion } from './../../shared/question.model';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material';
@@ -66,9 +71,15 @@ export class GameComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.startDialogRef = this.dialog.open(StartDialogComponent, {
-      width: '400px',
-      height: '400px'
+    setTimeout(() => {
+      this.startDialogRef = this.dialog.open(StartDialogComponent, {
+        width: '400px',
+        height: '400px'
+      });
+
+      this.startDialogRef.afterClosed().subscribe((r) => {
+        // initplayers(r)
+      });
     });
   }
 }
