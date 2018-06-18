@@ -1,5 +1,8 @@
 export interface IPlayer {
-  progress: number;
-  money: number;
+  id: number;
   player: string;
+  title: string;
+  titleCode: number;
+  money: number;
+  progress: number;
 }
