@@ -23,6 +23,7 @@
           <div id="quiz__buttons">
             <button mat-button mat-raised-button color="primary">Bestechen</button>
             <button mat-button mat-raised-button color="primary">OK</button>
+            <button mat-button mat-raised-button color="primary" (click)="dd()">OK</button>
           </div>
 
         </mat-card-content>
@@ -37,7 +38,7 @@
             </div>
           </section>
           <section>
-            <mat-progress-bar class="example-margin " [color]="color " [mode]="mode " [value]="progressBarValue">
+            <mat-progress-bar class="example-margin " [color]="color " [mode]="mode " [value]="game.progress">
             </mat-progress-bar>
           </section>
         </mat-card-content>

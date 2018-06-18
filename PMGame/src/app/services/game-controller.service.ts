@@ -73,9 +73,13 @@ export class GameControllerService {
     return player;
   }
 
+  /**
+   *
+   * @param playerCount count of player to be initiated
+   */
   initNewPlayers(playerCount: number): IPlayer[] {
     const players = [];
-    for (let i = 0; i < playerCount; i++) {
+    for (let i = 0; i <= playerCount; i++) {
       players.push({
         id: i,
         player: 'Player' + i,
@@ -89,6 +93,11 @@ export class GameControllerService {
     return players;
   }
 
+  /**
+   * Moves the internal game stage state and the view progress bar by one.
+   *
+   * @param game Game Object
+   */
   incrementStageCount(game: IGame): IGame {
     game.stage += 1;
     game.progress += 100 / Stages.length();
