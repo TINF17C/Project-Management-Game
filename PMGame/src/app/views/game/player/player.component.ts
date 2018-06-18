@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-import { IPlayer } from '../../../../shared/player.model';
+import { IPlayer } from '../../../shared/player.model';
 
 @Component({
   selector: 'app-player',
@@ -8,12 +8,13 @@ import { IPlayer } from '../../../../shared/player.model';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
+  @Input() player: IPlayer;
+
+  // Progress Bars
+  color = 'primary';
+  mode = 'determinate';
+
   constructor() {}
-  player = {
-    name: 'Player 1',
-    position: 'Trainee',
-    money: '1000'
-  };
 
   ngOnInit() {}
 }

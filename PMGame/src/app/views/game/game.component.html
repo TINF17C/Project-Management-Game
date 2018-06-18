@@ -1,10 +1,7 @@
 <div id="main__view">
   <div id="grid">
 
-    <app-player id="player1"></app-player>
-    <app-player id="player2"></app-player>
-    <app-player id="player3"></app-player>
-    <app-player id="player4"></app-player>
+    <app-player *ngFor="let player of players" [player]="player" [attr.id]="'player' + player.id"></app-player>
 
     <div id="quiz">
       <mat-card>
@@ -35,18 +32,12 @@
       <mat-card>
         <mat-card-content id="progress__content">
           <section id="progress__titles">
-            <div class="progress__titles-title progress__titles--rotate">
-              Start
-            </div>
-            <div class="progress__titles-title progress__titles--rotate" *ngFor="let stage of stages" [ngClass]="{'progress__titles--bold': currentStage === stage.value}">
-              {{ stage.name }}
-            </div>
-            <div class="progress__titles--rotate">
-              End
+            <div class="progress__titles-title" *ngFor="let stage of stages">
+              {{ stage }}
             </div>
           </section>
           <section>
-            <mat-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="value">
+            <mat-progress-bar class="example-margin " [color]="color " [mode]="mode " [value]="progressBarValue">
             </mat-progress-bar>
           </section>
         </mat-card-content>

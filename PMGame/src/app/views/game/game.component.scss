@@ -7,7 +7,6 @@ $primary: #3f51b5;
 }
 
 #main__view {
-  margin: 0 2rem;
   width: 80vw;
   height: auto;
 }
@@ -18,11 +17,15 @@ $primary: #3f51b5;
   grid-gap: 1rem;
   grid-template-rows: repeat(auto-fit, minmax(1fr));
   grid-template-areas:
+    'player0 quiz'
     'player1 quiz'
     'player2 quiz'
     'player3 quiz'
-    'player4 quiz'
     'progress progress';
+}
+
+#player0 {
+  grid-area: player0;
 }
 
 #player1 {
@@ -35,10 +38,6 @@ $primary: #3f51b5;
 
 #player3 {
   grid-area: player3;
-}
-
-#player4 {
-  grid-area: player4;
 }
 
 #quiz {
@@ -86,9 +85,6 @@ $primary: #3f51b5;
 
 .progress__titles-title {
   margin: 1rem 0;
-}
-
-.progress__titles--rotate {
   transform: rotate(-45deg);
 }
 
