@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { IQuestion } from './../../shared/question.model';
+import { MatDialog } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material';
+import { StartDialogComponent } from '../../start-dialog/start-dialog.component';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
-export class GameComponent implements OnInit {
+export class GameComponent implements OnInit, AfterViewInit {
   // progress bar
   color = 'primary';
   mode = 'determinate';
@@ -56,7 +59,16 @@ export class GameComponent implements OnInit {
   };
   selectedAnswer: string;
 
-  constructor() {}
+  startDialogRef: MatDialogRef<StartDialogComponent>;
+
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
+
+  ngAfterViewInit() {
+    this.startDialogRef = this.dialog.open(StartDialogComponent, {
+      width: '400px',
+      height: '400px'
+    });
+  }
 }
