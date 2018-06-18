@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-start-dialog',
@@ -10,6 +10,8 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class StartDialogComponent implements OnInit {
   form: FormGroup;
 
+  @Input() numberOfPlayers: number;
+
   constructor(
     private formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<StartDialogComponent>
@@ -17,11 +19,11 @@ export class StartDialogComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      filename: ''
+      numberOfPlayers: new FormControl()
     });
   }
 
   submit(form) {
-    this.dialogRef.close(`${form.value.NumberOfPlayers}`);
+    this.dialogRef.close(`${form.value.numberOfPlayers}`);
   }
 }
