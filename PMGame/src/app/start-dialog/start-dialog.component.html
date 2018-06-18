@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="submit(form)">
+  <h1 mat-dialog-title>Wilkommen!</h1>
+  <mat-dialog-content>
+    Wie viele Spieler sollen mit spielen?
+    <mat-form-field>
+      <mat-select formControlName="numberOfPlayers" placeholder="Spielerzahl" disableRipple>
+        <mat-option [value]="1" >1</mat-option>
+        <mat-option [value]="2" >2</mat-option>
+        <mat-option [value]="3" >3</mat-option>
+        <mat-option [value]="4" >4</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button type="submit" class="matButton">Los!</button>
+    <button mat-raised-button class="matButton" routerLink="/rules">Erklär mir erst die Regeln!</button>
+  </mat-dialog-actions>
+</form>

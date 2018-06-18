@@ -14,6 +14,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   imports: [
@@ -23,7 +26,10 @@ import { MatRadioModule } from '@angular/material/radio';
     MatProgressBarModule,
     MatIconModule,
     MatListModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   exports: [
     MatToolbarModule,
@@ -32,7 +38,10 @@ import { MatRadioModule } from '@angular/material/radio';
     MatProgressBarModule,
     MatIconModule,
     MatListModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule {}
