@@ -39,6 +39,9 @@ export class GameControllerService {
    */
   changePlayerMoney(player: IPlayer, amount: number): IPlayer {
     player.money += amount;
+    if (player.money < 0) {
+      player.money = 0;
+    }
     return player;
   }
 
