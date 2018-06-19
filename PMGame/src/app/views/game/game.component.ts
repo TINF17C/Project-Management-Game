@@ -33,6 +33,7 @@ export class GameComponent implements OnInit, AfterViewInit {
     options: ['42', 'Gutes Essen', 'Gott', 'Feder'],
     correctAnswer: 'Gutes Essen'
   };
+
   selectedAnswer: string;
 
   startDialogRef: MatDialogRef<StartDialogComponent>;
@@ -52,12 +53,8 @@ export class GameComponent implements OnInit, AfterViewInit {
       });
 
       this.startDialogRef.afterClosed().subscribe((r) => {
-        this.initPlayers(r);
+        this.players = this.controller.initNewPlayers(r);
       });
     });
-  }
-
-  initPlayers(playerCount: number): void {
-    this.players = this.controller.initNewPlayers(playerCount);
   }
 }
