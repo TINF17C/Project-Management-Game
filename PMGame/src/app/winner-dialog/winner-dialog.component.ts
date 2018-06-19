@@ -9,4 +9,6 @@ export class WinnerDialogComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  winnerString = 'DummyString';
 }
