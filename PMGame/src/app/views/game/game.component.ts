@@ -5,6 +5,7 @@ import { GameControllerService } from '../../services/game-controller.service';
 import { IPlayer } from '../../shared/player.model';
 import { Stages } from '../../shared/stages.enums';
 import { StartDialogComponent } from '../../start-dialog/start-dialog.component';
+import { WinnerDialogComponent } from '../../winner-dialog/winner-dialog.component';
 
 @Component({
   selector: 'app-game',
@@ -37,6 +38,7 @@ export class GameComponent implements OnInit, AfterViewInit {
   selectedAnswer: string;
 
   startDialogRef: MatDialogRef<StartDialogComponent>;
+  winnerDialogRef: MatDialogRef<WinnerDialogComponent>;
 
   constructor(
     public controller: GameControllerService,
@@ -57,4 +59,12 @@ export class GameComponent implements OnInit, AfterViewInit {
       });
     });
   }
+
+  /*
+  * To start the winnerdialog:
+  * this.winnerDialogRef = this.dialog.open(WinnerDialogComponent{
+        width: '400px',
+        height: '400px'
+      });
+  */
 }
