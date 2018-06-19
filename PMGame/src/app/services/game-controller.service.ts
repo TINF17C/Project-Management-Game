@@ -66,10 +66,14 @@ export class GameControllerService {
    * @param difference how many positions the player moves up / down
    */
   changePlayerTitle(player: IPlayer, difference: number): IPlayer {
-    if (player.titleCode + difference >= 0 && player.titleCode < 7) {
+    const JobTitlesAmount = Jobtitles.length();
+    if (
+      player.titleCode + difference >= 0 &&
+      player.titleCode < JobTitlesAmount
+    ) {
       player.titleCode += difference;
       player.title = Jobtitles[player.titleCode];
-      player.progress += difference * (100 / Jobtitles.length());
+      player.progress += difference * (100 / JobTitlesAmount);
     } else {
       // Player === 'noob' || Player === 'God'
     }
