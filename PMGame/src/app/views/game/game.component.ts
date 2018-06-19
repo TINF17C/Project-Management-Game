@@ -5,6 +5,7 @@ import { GameControllerService } from '../../services/game-controller.service';
 import { IPlayer } from '../../shared/player.model';
 import { Stages } from '../../shared/stages.enums';
 import { StartDialogComponent } from '../../start-dialog/start-dialog.component';
+import { WinnerDialogComponent } from '../../winner-dialog/winner-dialog.component';
 
 @Component({
   selector: 'app-game',
@@ -35,9 +36,11 @@ export class GameComponent implements OnInit, AfterViewInit {
     correctAnswer: 2,
     difficulty: 1
   };
+
   selectedAnswer: string;
 
   startDialogRef: MatDialogRef<StartDialogComponent>;
+  winnerDialogRef: MatDialogRef<WinnerDialogComponent>;
 
   constructor(
     public controller: GameControllerService,
@@ -54,53 +57,16 @@ export class GameComponent implements OnInit, AfterViewInit {
       });
 
       this.startDialogRef.afterClosed().subscribe((r) => {
-        this.initPlayers(r);
+        this.players = this.controller.initNewPlayers(r);
       });
     });
   }
 
-  initPlayers(playerCount: number): void {
-    this.players = this.controller.initNewPlayers(playerCount);
-    this.currentPlayer = 0;
-  }
-
-  bribe() {
-    this.controller.changePlayerMoney(
-      this.players[this.currentPlayer],
-      this.question.difficulty * -300
-    );
-    //this.controller.changePlayerTitle(this.players[this.currentPlayer], 1);
-    this.nextTurn();
-  }
-
-  submit() {
-    if (
-      this.question.options[this.question.correctAnswer - 1] ===
-      this.selectedAnswer
-    ) {
-      this.controller.changePlayerMoney(
-        this.players[this.currentPlayer],
-        this.question.difficulty * 100
-      );
-      this.controller.changePlayerTitle(this.players[this.currentPlayer], 1);
-      this.nextTurn();
-      //console.log(this.players[this.currentPlayer].id);
-    } else {
-      this.controller.changePlayerMoney(
-        this.players[this.currentPlayer],
-        this.question.difficulty * -100
-      );
-      this.controller.changePlayerTitle(this.players[this.currentPlayer], -1);
-      this.nextTurn();
-    }
-  }
-
-  nextTurn() {
-    this.currentPlayer++;
-    if (this.currentPlayer >= this.players.length) {
-      //Gehe zu Spieler 1 und setze die Stage um 1 rauf
-      this.currentPlayer = 0;
-      this.controller.incrementStageCount(this.game);
-    }
-  }
+  /*
+  * To start the winnerdialog:
+  * this.winnerDialogRef = this.dialog.open(WinnerDialogComponent{
+        width: '400px',
+        height: '400px'
+      });
+  */
 }
