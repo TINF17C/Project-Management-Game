@@ -1,14 +1,14 @@
 export enum Stages {
   Start,
-  Eins,
-  Zwei,
-  Drei,
-  vier,
-  Fünf,
-  Sechs,
-  Sieben,
-  Acht,
-  End
+  Initiierung,
+  Zielsetzung,
+  Einrichtung,
+  Planung,
+  Beschaffung,
+  Realisierung,
+  Einführung,
+  Abnahme,
+  Ende
 }
 
 export namespace Stages {
