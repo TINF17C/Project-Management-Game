@@ -11,9 +11,9 @@ export class QuestionService {
 
   constructor(public http: HttpClient) {}
 
-  getQuestions(): Observable<IQuestion[]> {
-    this.http.get(this.serverURL).subscribe((data: IQuestion[]) => {
-      return data;
-    });
-  }
+  // getQuestions(): Observable<IQuestion[]> {
+  //   this.http.get(this.serverURL).subscribe((data: IQuestion[]) => {
+  //     return data;
+  //   });
+  // }
 }
