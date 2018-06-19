@@ -45,7 +45,9 @@ export class GameComponent implements OnInit, AfterViewInit {
   constructor(
     public controller: GameControllerService,
     public dialog: MatDialog
-  ) {}
+  ) {
+    this.currentPlayer = 0;
+  }
 
   ngOnInit() {}
 
@@ -60,6 +62,72 @@ export class GameComponent implements OnInit, AfterViewInit {
         this.players = this.controller.initNewPlayers(r);
       });
     });
+  }
+
+  /**
+   * Handles the game logic.
+   */
+  submit() {
+
+    // TODO: Check if any answer is selected.
+
+    if(this.isGameOver()) {
+      // TODO: Show winner dialog.
+      alert("Game Over!");
+      return;
+    }
+    
+    if(this.isCorrectAnswer()) {
+      this.rewardCurrentPlayer();
+    } else {
+      alert("Sorry, wrong answer!");
+    }
+
+    this.currentPlayer++;
+    if(this.currentPlayer >= this.players.length) {
+      this.currentPlayer = 0;
+      this.controller.incrementStageCount(this.game);
+    }
+
+    this.selectNextQuestion();
+  }
+
+  /**
+   * Checks if the player has answered the current question correctly.
+   */
+  isCorrectAnswer() : boolean {
+    return this.selectedAnswer === this.question.options[this.question.correctAnswer - 1];
+  }
+
+  /**
+   * Rewards the active player based on the question and its difficulty.
+   */
+  rewardCurrentPlayer() {
+    var currentPlayer = this.getCurrentPlayer();
+    var newMoney = currentPlayer.money + this.question.difficulty * 100;
+    this.controller.setPlayerMoney(currentPlayer, newMoney);
+  }
+
+  /**
+   * Returns the current player.
+   */
+  getCurrentPlayer() : IPlayer {
+    return this.players[this.currentPlayer];
+  }
+
+  /**
+   * Selects the next question.
+   */
+  selectNextQuestion() {
+    //  TODO
+    //  this.question = ...
+  }
+
+  /**
+   * Checks whether the game is over.
+   */
+  isGameOver() : boolean {
+    return this.game.stage === this.stages.length - 1;
   }
 
   /*
