@@ -51,7 +51,8 @@ export class GameControllerService {
   setPlayerTitle(player: IPlayer, titleCode: number): IPlayer {
     player.titleCode = titleCode;
     player.title = Jobtitles[titleCode];
-    player.progress = (titleCode + 1) * (100 / Jobtitles.length());
+    player.progress = titleCode * (100 / Jobtitles.length());
+    console.log(player);
     return player;
   }
 
@@ -62,12 +63,12 @@ export class GameControllerService {
    * @param difference how many positions the player moves up / down
    */
   changePlayerTitle(player: IPlayer, difference: number): IPlayer {
-    if (player.titleCode + difference >= 0) {
+    if (player.titleCode + difference >= 0 && player.titleCode < 7) {
       player.titleCode += difference;
       player.title = Jobtitles[player.titleCode];
-      player.progress += (difference + 1) * (100 / Jobtitles.length());
+      player.progress += difference * (100 / Jobtitles.length());
     } else {
-      // Player === noob
+      // Player === 'noob' || Player === 'God'
     }
     return player;
   }
