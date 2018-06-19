@@ -3,7 +3,6 @@ import { Jobtitles } from '../shared/jobtitles.enums';
 import { Stages } from '../shared/stages.enums';
 import { IPlayer } from '../shared/player.model';
 import { IGame } from '../shared/game.model';
-import { NG_TRIGGER_CLASSNAME } from '@angular/animations/browser/src/util';
 
 @Injectable({
   providedIn: 'root'
