@@ -14,6 +14,7 @@ import { GameComponent } from './views/game/game.component';
 import { PlayerComponent } from './views/game/player/player.component';
 import { StartDialogComponent } from './start-dialog/start-dialog.component';
 import { AboutComponent } from './views/about/about.component';
+import { RulesComponent } from './views/rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AboutComponent } from './views/about/about.component';
     GameComponent,
     PlayerComponent,
     StartDialogComponent,
-    AboutComponent
+    AboutComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
