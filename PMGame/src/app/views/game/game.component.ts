@@ -64,6 +64,9 @@ export class GameComponent implements OnInit, AfterViewInit {
     });
   }
 
+  /**
+   * When you click the bribe button this function is executed. It reduces money, keeps the rank and ends the turn.
+   */
   bribe() {
     //this.controller.changePlayerTitle(this.players[this.currentPlayer], 0);
     this.controller.changePlayerMoney(
@@ -73,6 +76,10 @@ export class GameComponent implements OnInit, AfterViewInit {
     this.nextTurn();
   }
 
+  /**
+   * When you click the "OK" button this function is executed. It checks if the answer is correct, adds or reduces money
+   * and title and ends the turn.
+   */
   submit() {
     if (
       this.question.options[this.question.correctAnswer - 1] ===
@@ -95,6 +102,10 @@ export class GameComponent implements OnInit, AfterViewInit {
     this.nextTurn();
   }
 
+  /**
+   * This function ends the turn, makes the next player the active player, ends the gameRound if necessary and fetches a
+   * new question from the database.
+   */
   nextTurn() {
     this.currentPlayer++;
     if (this.currentPlayer >= this.players.length) {
@@ -104,8 +115,19 @@ export class GameComponent implements OnInit, AfterViewInit {
         this.gameEnds();
       }
     }
+    this.fetchNewQuestion();
   }
 
+  /**
+   * This function is supposed to fetch a new question from the database.
+   */
+  fetchNewQuestion() {
+    //TODO: Get a new question from the database and fill this.question in the correct way with it.
+  }
+
+  /**
+   * This function checks who the winner is, hands that information to the winner-dialog and displays that.
+   */
   gameEnds() {
     let victoryPoints = new Array(this.players.length);
     let highestPoints = 0;
@@ -126,7 +148,7 @@ export class GameComponent implements OnInit, AfterViewInit {
         }
       }
     }
-    //pass winnerString to the dialog somehow
+    //TODO: pass winnerString to the dialog somehow. This should happen here.
     this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
       width: '400px',
       height: '400px'
