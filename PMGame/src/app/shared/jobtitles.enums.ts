@@ -1,12 +1,12 @@
 export enum Jobtitles {
-  Eins,
-  Zwei,
-  Drei,
-  vier,
-  Fünf,
-  Sechs,
-  Sieben,
-  Acht
+  Praktikant,
+  Auszubildender,
+  Mitarbeiter,
+  'SCRUM-Master',
+  Teamleiter,
+  Projektleiter,
+  'Assistant-Manager',
+  Manager
 }
 
 export namespace Jobtitles {
