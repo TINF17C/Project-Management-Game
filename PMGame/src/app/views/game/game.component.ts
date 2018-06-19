@@ -58,8 +58,55 @@ export class GameComponent implements OnInit, AfterViewInit {
 
       this.startDialogRef.afterClosed().subscribe((r) => {
         this.players = this.controller.initNewPlayers(r);
+        this.currentPlayer = 0;
       });
     });
+  }
+
+  bribe() {
+    //this.controller.changePlayerTitle(this.players[this.currentPlayer], 0);
+    this.controller.changePlayerMoney(
+      this.players[this.currentPlayer],
+      this.question.difficulty * -300
+    );
+    this.nextTurn();
+  }
+
+  submit() {
+    if (
+      this.question.options[this.question.correctAnswer - 1] ===
+      this.selectedAnswer
+    ) {
+      //console.log("Correct!");
+      this.controller.changePlayerTitle(this.players[this.currentPlayer], 1);
+      this.controller.changePlayerMoney(
+        this.players[this.currentPlayer],
+        this.question.difficulty * 100
+      );
+    } else {
+      //console.log("Wrong!");
+      this.controller.changePlayerTitle(this.players[this.currentPlayer], -1);
+      this.controller.changePlayerMoney(
+        this.players[this.currentPlayer],
+        this.question.difficulty * -100
+      );
+    }
+    this.nextTurn();
+  }
+
+  nextTurn() {
+    this.currentPlayer++;
+    if (this.currentPlayer >= this.players.length) {
+      this.currentPlayer = 0;
+      this.controller.incrementStageCount(this.game);
+      if (this.game.stage === 9) {
+        let victoryPoints = new Array(this.players.length);
+        this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
+          width: '400px',
+          height: '400px'
+        });
+      }
+    }
   }
 
   /*
