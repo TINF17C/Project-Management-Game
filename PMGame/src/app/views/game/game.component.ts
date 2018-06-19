@@ -41,6 +41,7 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   startDialogRef: MatDialogRef<StartDialogComponent>;
   winnerDialogRef: MatDialogRef<WinnerDialogComponent>;
+  winnerString = '';
 
   constructor(
     public controller: GameControllerService,
@@ -100,13 +101,36 @@ export class GameComponent implements OnInit, AfterViewInit {
       this.currentPlayer = 0;
       this.controller.incrementStageCount(this.game);
       if (this.game.stage === 9) {
-        let victoryPoints = new Array(this.players.length);
-        this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
-          width: '400px',
-          height: '400px'
-        });
+        this.gameEnds();
       }
     }
+  }
+
+  gameEnds() {
+    let victoryPoints = new Array(this.players.length);
+    let highestPoints = 0;
+    for (let i = 0; i < this.players.length; i++) {
+      victoryPoints[i] = this.players[i].money * this.players[i].titleCode;
+      if (highestPoints < victoryPoints[i]) {
+        highestPoints = victoryPoints[i];
+      }
+    }
+    let firstVictor = true;
+    for (let i = 0; i < this.players.length; i++) {
+      if (victoryPoints[i] === highestPoints) {
+        if (firstVictor) {
+          firstVictor = false;
+          this.winnerString = this.players[i].player;
+        } else {
+          this.winnerString = this.winnerString + ', ' + this.players[i].player;
+        }
+      }
+    }
+    //pass winnerString to the dialog somehow
+    this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
+      width: '400px',
+      height: '400px'
+    });
   }
 
   /*
