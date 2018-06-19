@@ -6,7 +6,8 @@ export enum Jobtitles {
   Teamleiter,
   Projektleiter,
   'Assistant-Manager',
-  Manager
+  Manager,
+  Osterrieder
 }
 
 export namespace Jobtitles {
