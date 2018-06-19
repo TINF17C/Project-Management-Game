@@ -1,0 +1,77 @@
+<h1>- Regeln -</h1>
+<mat-accordion>
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong>Spielziel</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <p>Dieses Spiel soll dir die Grundideen des Projektmanagements näherbringen, <br>
+        indem es dir und deinen Freunden zu verschiedenen Themen des Projektmanagements der Reihe nach Fragen stellt.<br>
+        Du kannst dieses Spiel auch alleine Spielen. Wir glauben aber, dass du mit ein paar Freunden zusammen mehr Spaß hast.</p>
+
+      <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">Nächste</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong>Spielstart</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <p>Das Spiel zu starten ist ganz einfach:<br>
+      Falls du einen halbwegs moderenen Browser hast navigierst du einfach zu der Spielansicht und schon geht es los.<br>
+      Beginne indem du die Spieleranzahl in das kleine PopUp einträgst. Solltest du hier mal einen Fehler machen ist das natürlich kein Problem.<br>
+      Navigiere einfach zurück und starte dann das Spiel neu, dann kannst du von vorne Beginnen. Im Zweifel lade diese Seite einfach neu.<br>
+      Danach beantwortet ihr einfach nacheinander eure erste Frage und schaut wer am besten ist!</p>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Zurück</button>
+        <button mat-button color="primary" (click)="nextStep()">Nächste</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>Interface</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+    
+        <p>Links findet ihr euren persönlichen Bereich.<br>
+        Jeder von euch ist als Spieler dargestellt.<br>
+        Euer persönlicher Forschritt wird einmal im Jobtitel neben dem Namen festgehalten und in der Forschrittsbar.<br>
+        Unten findet ihr den gesamten Spielfortschritt und rechts den Fragenbereich.</p>
+        
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Zurück</button>
+          <button mat-button color="primary" (click)="nextStep()">Nächste</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong>Spielrunde</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <p>Eine Spielrunde läuft eigentlich immer gleich ab:<br>
+      Der erste Spieler beginnt und liest sich die Frage durch, die am linken Bildschirmrand angezeigt wird.<br>
+      Danach kann er in Ruhe eine der Antworten anwählen und bestätigt seine Auswahl.<br>
+      Denkt gut über eure Antwort nach. Bei einer falschen Antwort bekommt ihr von eurem Konto Geld abzogen und du wirst degradiert!<br>
+      Das Leben als Projektmanager ist hart, nur erfolgreiche Arbeit wird mit Gehalt und einer Beförderung belohnt.<br>
+      Wenn du wirklich nicht weiter weißt kannst du auch einfach dein bisher verdientes Geld dazu nutzen deinen Vorgesetzten zu bestechen,<br> 
+        um eine Runde zu überspringen.</p>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Zurück</button>
+        <button mat-button color="primary" (click)="nextStep()">Ende</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+  </mat-accordion>
