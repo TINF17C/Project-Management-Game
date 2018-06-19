@@ -65,7 +65,26 @@ export class GameComponent implements OnInit, AfterViewInit {
   }
 
   /**
-   * Handles the game logic.
+   * Handles the bribe functionality.
+   * For now money is removed from the player.
+   */
+  bribe() {
+
+    if(this.isGameOver()) {
+      // TODO: Show winner dialog.
+      alert("Game Over!");
+      return;
+    }
+
+    var player = this.getCurrentPlayer();
+    player.money -= 100;
+
+
+    this.update();
+  }
+
+  /**
+   * Handles the game logic for the OK button.
    */
   submit() {
 
@@ -83,6 +102,14 @@ export class GameComponent implements OnInit, AfterViewInit {
       alert("Sorry, wrong answer!");
     }
 
+    
+    this.update();
+  }
+
+  /**
+   * Switches to the next turn.
+   */
+  update() {
     this.currentPlayer++;
     if(this.currentPlayer >= this.players.length) {
       this.currentPlayer = 0;
