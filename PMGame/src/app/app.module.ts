@@ -13,6 +13,7 @@ import { HomeComponent } from './views/home/home.component';
 import { GameComponent } from './views/game/game.component';
 import { PlayerComponent } from './views/game/player/player.component';
 import { StartDialogComponent } from './start-dialog/start-dialog.component';
+import { AboutComponent } from './views/about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StartDialogComponent } from './start-dialog/start-dialog.component';
     HomeMenuComponent,
     GameComponent,
     PlayerComponent,
-    StartDialogComponent
+    StartDialogComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
