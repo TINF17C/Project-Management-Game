@@ -15,6 +15,7 @@ import { PlayerComponent } from './views/game/player/player.component';
 import { StartDialogComponent } from './start-dialog/start-dialog.component';
 import { AboutComponent } from './views/about/about.component';
 import { RulesComponent } from './views/rules/rules.component';
+import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RulesComponent } from './views/rules/rules.component';
     PlayerComponent,
     StartDialogComponent,
     AboutComponent,
-    RulesComponent
+    RulesComponent,
+    WinnerDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { RulesComponent } from './views/rules/rules.component';
     ReactiveFormsModule
   ],
   providers: [],
-  entryComponents: [StartDialogComponent],
+  entryComponents: [StartDialogComponent, WinnerDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
