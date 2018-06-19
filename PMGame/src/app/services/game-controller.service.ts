@@ -38,7 +38,11 @@ export class GameControllerService {
    * @param amount how much money the player loses or receives
    */
   changePlayerMoney(player: IPlayer, amount: number): IPlayer {
-    player.money += amount;
+    if (player.money >= amount) {
+      player.money += amount;
+    } else {
+      player.money = 0;
+    }
     return player;
   }
 
@@ -52,7 +56,6 @@ export class GameControllerService {
     player.titleCode = titleCode;
     player.title = Jobtitles[titleCode];
     player.progress = titleCode * (100 / Jobtitles.length());
-    console.log(player);
     return player;
   }
 
