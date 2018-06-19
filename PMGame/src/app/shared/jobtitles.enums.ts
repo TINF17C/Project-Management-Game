@@ -16,6 +16,6 @@ export namespace Jobtitles {
   }
 
   export function length(): number {
-    return Object.keys(Jobtitles).length / 2 - 1;
+    return Object.keys(Jobtitles).length / 2 - 2;
   }
 }
