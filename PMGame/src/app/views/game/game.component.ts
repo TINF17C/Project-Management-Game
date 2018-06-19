@@ -20,6 +20,7 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   // player objects
   players: IPlayer[];
+  currentPlayer: number;
 
   // progress bar view
   color = 'primary';
@@ -31,7 +32,8 @@ export class GameComponent implements OnInit, AfterViewInit {
   question = {
     question: 'Was ist der Sinn des Lebens?',
     options: ['42', 'Gutes Essen', 'Gott', 'Feder'],
-    correctAnswer: 'Gutes Essen'
+    correctAnswer: 2,
+    difficulty: 1
   };
   selectedAnswer: string;
 
@@ -59,5 +61,46 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   initPlayers(playerCount: number): void {
     this.players = this.controller.initNewPlayers(playerCount);
+    this.currentPlayer = 0;
+  }
+
+  bribe() {
+    this.controller.changePlayerMoney(
+      this.players[this.currentPlayer],
+      this.question.difficulty * -300
+    );
+    //this.controller.changePlayerTitle(this.players[this.currentPlayer], 1);
+    this.nextTurn();
+  }
+
+  submit() {
+    if (
+      this.question.options[this.question.correctAnswer - 1] ===
+      this.selectedAnswer
+    ) {
+      this.controller.changePlayerMoney(
+        this.players[this.currentPlayer],
+        this.question.difficulty * 100
+      );
+      this.controller.changePlayerTitle(this.players[this.currentPlayer], 1);
+      this.nextTurn();
+      //console.log(this.players[this.currentPlayer].id);
+    } else {
+      this.controller.changePlayerMoney(
+        this.players[this.currentPlayer],
+        this.question.difficulty * -100
+      );
+      this.controller.changePlayerTitle(this.players[this.currentPlayer], -1);
+      this.nextTurn();
+    }
+  }
+
+  nextTurn() {
+    this.currentPlayer++;
+    if (this.currentPlayer >= this.players.length) {
+      //Gehe zu Spieler 1 und setze die Stage um 1 rauf
+      this.currentPlayer = 0;
+      this.controller.incrementStageCount(this.game);
+    }
   }
 }
