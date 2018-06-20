@@ -9,6 +9,7 @@ import { IPlayer } from '../../../shared/player.model';
 })
 export class PlayerComponent implements OnInit {
   @Input() player: IPlayer;
+  @Input() currentPlayer: number;
 
   // Progress Bars
   color = 'primary';
