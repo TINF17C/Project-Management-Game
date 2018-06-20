@@ -1,4 +1,4 @@
-<mat-card class="player-container">
+<mat-card class="player-container" [ngClass]="{'player__background--selected': player.id === currentPlayer}">
   <div class="player-content-left">
     <h2>
       <mat-icon>person</mat-icon> {{ player.player }}: {{player.title}}</h2>

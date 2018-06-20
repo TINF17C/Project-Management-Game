@@ -1,7 +1,7 @@
 <div id="main__view">
   <div id="grid">
 
-    <app-player *ngFor="let player of players" [player]="player" [attr.id]="'player' + player.id"></app-player>
+    <app-player *ngFor="let player of players" [player]="player" [attr.id]="'player' + player.id" [currentPlayer]="currentPlayer"></app-player>
 
     <div id="quiz">
       <mat-card>

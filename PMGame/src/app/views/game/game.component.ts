@@ -68,7 +68,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    * When you click the bribe button this function is executed. It reduces money, keeps the rank and ends the turn.
    */
   bribe() {
-    //this.controller.changePlayerTitle(this.players[this.currentPlayer], 0);
+    // this.controller.changePlayerTitle(this.players[this.currentPlayer], 0);
     this.controller.changePlayerMoney(
       this.players[this.currentPlayer],
       this.question.difficulty * -300
@@ -85,14 +85,14 @@ export class GameComponent implements OnInit, AfterViewInit {
       this.question.options[this.question.correctAnswer - 1] ===
       this.selectedAnswer
     ) {
-      //console.log("Correct!");
+      // console.log("Correct!");
       this.controller.changePlayerTitle(this.players[this.currentPlayer], 1);
       this.controller.changePlayerMoney(
         this.players[this.currentPlayer],
         this.question.difficulty * 100
       );
     } else {
-      //console.log("Wrong!");
+      // console.log("Wrong!");
       this.controller.changePlayerTitle(this.players[this.currentPlayer], -1);
       this.controller.changePlayerMoney(
         this.players[this.currentPlayer],
@@ -122,14 +122,14 @@ export class GameComponent implements OnInit, AfterViewInit {
    * This function is supposed to fetch a new question from the database.
    */
   fetchNewQuestion() {
-    //TODO: Get a new question from the database and fill this.question in the correct way with it.
+    // TODO: Get a new question from the database and fill this.question in the correct way with it.
   }
 
   /**
    * This function checks who the winner is, hands that information to the winner-dialog and displays that.
    */
   gameEnds() {
-    let victoryPoints = new Array(this.players.length);
+    const victoryPoints = new Array(this.players.length);
     let highestPoints = 0;
     for (let i = 0; i < this.players.length; i++) {
       victoryPoints[i] = this.players[i].money * this.players[i].titleCode;
@@ -148,7 +148,7 @@ export class GameComponent implements OnInit, AfterViewInit {
         }
       }
     }
-    //TODO: pass winnerString to the dialog somehow. This should happen here.
+    // TODO: pass winnerString to the dialog somehow. This should happen here.
     this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
       width: '400px',
       height: '400px'
