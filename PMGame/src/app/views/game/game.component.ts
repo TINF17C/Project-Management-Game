@@ -64,9 +64,14 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   /*
   * To start the winnerdialog:
-  * this.winnerDialogRef = this.dialog.open(WinnerDialogComponent{
-        width: '400px',
-        height: '400px'
-      });
+  * winningPlayer = 'Herbert';
+  * this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
+      width: '400px',
+      height: '400px',
+      data: {
+        winningPlayer: this.winningPlayer
+      }
+    });
+  *
   */
 }

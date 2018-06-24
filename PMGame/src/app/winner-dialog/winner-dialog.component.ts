@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-winner-dialog',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./winner-dialog.component.scss']
 })
 export class WinnerDialogComponent implements OnInit {
-  constructor() {}
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    public dialogRef: MatDialogRef<WinnerDialogComponent>
+  ) {}
 
   ngOnInit() {}
+
+  closeDialog() {
+    this.dialogRef.close();
+  }
 }
