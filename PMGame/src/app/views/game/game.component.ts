@@ -230,7 +230,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   fetchNewQuestion() {
     this.questionOptions = [];
-    const number = Math.round(Math.random() * this.questions.length);
+    const number = Math.round(Math.random() * (this.questions.length - 1));
     if (this.trash.includes(number)) {
       this.fetchNewQuestion();
     } else {
