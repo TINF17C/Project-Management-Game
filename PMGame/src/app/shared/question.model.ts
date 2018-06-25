@@ -1,7 +1,7 @@
 export interface IQuestion {
   id: number;
   Frage: string;
-  Ersatzungssatz: string;
+  Ersetzungssatz: string;
   Antwort1: string;
   Antwort2: string;
   Antwort3: string;
