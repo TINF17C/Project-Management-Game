@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RulesComponent } from './rules.component';
+import { MaterialModule } from '../../material.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('RulesComponent', () => {
   let component: RulesComponent;
@@ -8,6 +10,7 @@ describe('RulesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MaterialModule, NoopAnimationsModule],
       declarations: [RulesComponent]
     }).compileComponents();
   }));
