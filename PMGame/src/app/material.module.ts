@@ -18,6 +18,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSnackBarModule
   ],
   exports: [
     MatToolbarModule,
@@ -44,7 +46,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule {}

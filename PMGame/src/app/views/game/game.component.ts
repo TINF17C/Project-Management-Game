@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
+import { MatDialogRef, MatSnackBar } from '@angular/material';
 import { MatDialog } from '@angular/material/dialog';
 import { GameControllerService } from '../../services/game-controller.service';
 import { IPlayer } from '../../shared/player.model';
@@ -58,7 +58,8 @@ export class GameComponent implements OnInit, AfterViewInit {
   constructor(
     public questionService: QuestionService,
     public controller: GameControllerService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {
@@ -94,16 +95,23 @@ export class GameComponent implements OnInit, AfterViewInit {
 
     if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
-      alert('Game is already over!');
+      this.snackBar.open('Das Spiel ist bereits beendet.', 'Schade', {
+        duration: 3000
+      });
       return;
     }
 
     if (!this.isAbleToBribe()) {
       //  TODO: Show some dialog.
-      alert('Cannot bribe! Not enough money.');
+      this.snackBar.open('Du hast nicht genug Geld!', 'Schade', {
+        duration: 3000
+      });
       return;
     }
 
+    this.snackBar.open('Der Spielleiter akzeptiert dein Angebot...', 'Psst.', {
+      duration: 3000
+    });
     this.punishCurrentPlayer(300, false);
     this.nextTurn();
   }
@@ -117,7 +125,9 @@ export class GameComponent implements OnInit, AfterViewInit {
 
     if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
-      alert('Game is already over!');
+      this.snackBar.open('Das Spiel ist bereits beendet.', 'Schade', {
+        duration: 3000
+      });
       return;
     }
 
