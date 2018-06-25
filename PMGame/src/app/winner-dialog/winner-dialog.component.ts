@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { MatDialog } from '@angular/material/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material';
+import { IWinnerName } from '../shared/winnerName.model';
 
 @Component({
   selector: 'app-winner-dialog',
@@ -10,13 +11,13 @@ import { MAT_DIALOG_DATA } from '@angular/material';
 })
 export class WinnerDialogComponent implements OnInit {
   constructor(
-    @Inject(MAT_DIALOG_DATA) public winnerName: string,
+    @Inject(MAT_DIALOG_DATA) public winnerName: IWinnerName,
     public dialogRef: MatDialogRef<WinnerDialogComponent>
   ) {}
 
   ngOnInit() {}
 
-  onClickOk() {
+  closeDialog() {
     this.dialogRef.close();
   }
 }
