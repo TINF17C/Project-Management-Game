@@ -35,14 +35,14 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   question = {
     id: 0,
-    Frage: 'string',
-    Ersatzungssatz: 'string',
-    Antwort1: 'string',
-    Antwort2: 'string',
-    Antwort3: 'string',
-    Antwort4: 'string',
-    richtig: 1,
-    schwierigkeitsgrad: 1
+    Frage: '',
+    Ersatzungssatz: '',
+    Antwort1: '',
+    Antwort2: '',
+    Antwort3: '',
+    Antwort4: '',
+    richtig: 0,
+    schwierigkeitsgrad: 0
   };
 
   questionOptions = [];
@@ -209,8 +209,9 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   fetchNewQuestion() {
     this.questionOptions = [];
-    const number = Math.floor(Math.random() * this.questions.length);
+    const number = Math.round(Math.random() * this.questions.length);
     this.question = this.questions[number];
+    console.log(this.question);
     this.questionOptions.push(this.question.Antwort1);
     this.questionOptions.push(this.question.Antwort2);
     this.questionOptions.push(this.question.Antwort3);
