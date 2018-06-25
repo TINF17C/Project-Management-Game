@@ -95,16 +95,23 @@ export class GameComponent implements OnInit, AfterViewInit {
 
     if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
-      alert('Game is already over!');
+      this.snackBar.open('Das Spiel ist bereits beendet.', 'Schade', {
+        duration: 3000
+      });
       return;
     }
 
     if (!this.isAbleToBribe()) {
       //  TODO: Show some dialog.
-      this.snackBar.open('Du hast nicht genug Geld!', 'Undo');
+      this.snackBar.open('Du hast nicht genug Geld!', 'Schade', {
+        duration: 3000
+      });
       return;
     }
 
+    this.snackBar.open('Der Spielleiter akzeptiert dein Angebot...', 'Psst.', {
+      duration: 3000
+    });
     this.punishCurrentPlayer(300, false);
     this.nextTurn();
   }
@@ -118,7 +125,9 @@ export class GameComponent implements OnInit, AfterViewInit {
 
     if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
-      alert('Game is already over!');
+      this.snackBar.open('Das Spiel ist bereits beendet.', 'Schade', {
+        duration: 3000
+      });
       return;
     }
 
