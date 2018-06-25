@@ -16,6 +16,7 @@ import { StartDialogComponent } from './start-dialog/start-dialog.component';
 import { AboutComponent } from './views/about/about.component';
 import { RulesComponent } from './views/rules/rules.component';
 import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   entryComponents: [StartDialogComponent, WinnerDialogComponent],

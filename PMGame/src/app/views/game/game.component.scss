@@ -44,7 +44,7 @@ $primary: #3f51b5;
   grid-area: quiz;
   height: 100%;
   min-height: 100%;
-  width: 100%;
+  width: 30vw;
 }
 
 #quiz__header {
@@ -54,13 +54,16 @@ $primary: #3f51b5;
 }
 
 #quiz__options {
-  display: inline-flex;
-  flex-direction: column;
   margin: 2rem auto;
 }
 
 .quiz__options-radio-button {
   padding: 10px;
+}
+
+.quiz__options-option {
+  width: 25vw;
+  white-space: normal;
 }
 
 #quiz__option > * {
@@ -95,4 +98,8 @@ $primary: #3f51b5;
   font-size: 150%;
   font-weight: 600;
   color: $primary;
+}
+
+.quiz__correct {
+  color: #27ae60;
 }

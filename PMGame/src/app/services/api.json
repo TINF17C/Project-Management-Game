@@ -1,0 +1,772 @@
+[
+  {
+    "id": "2",
+    "Frage": "Was ist der letzte Teil der Abnahme beim Kunden?",
+    "Ersetzungssatz": "Die ... ist der letzte Schritt der Abnahme.",
+    "Antwort1": "Funktionspr\u00fcfung beim Kunden",
+    "Antwort2": "Protokollierung der Abnahme",
+    "Antwort3": "Erstellung von Testf\u00e4llen",
+    "Antwort4": "Internen Test",
+    "richtig": "2",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "3",
+    "Frage": "Was wird in der Projektrevision beschrieben?",
+    "Ersetzungssatz": "In der Projektrevision werden ... beschrieben.",
+    "Antwort1": "die nicht eingetretenen Risiken",
+    "Antwort2": "die eingetretenen Risiken",
+    "Antwort3": "die nicht eintretenden Restrisiken",
+    "Antwort4": "gerissene H\u00fcrden",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "4",
+    "Frage": "Welche Ehrfahrungen sollen nicht explizit dokumeniert werden?",
+    "Ersetzungssatz": "Die ... sollen nicht explizit dokumentiert werden",
+    "Antwort1": "Methoden",
+    "Antwort2": "Werkzeuge",
+    "Antwort3": "Techniken",
+    "Antwort4": "Schreibstile",
+    "richtig": "4",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "5",
+    "Frage": "Worum geht es bei der Zeitplanung nicht?",
+    "Ersetzungssatz": "Bei der Zeitplanung geht es nicht um ...",
+    "Antwort1": "die Dauer der einzelnen Vorg\u00e4nge",
+    "Antwort2": "die Gesamtdauer des Projekts",
+    "Antwort3": "den Start- und Endtermin des Projekts",
+    "Antwort4": "die Kosten der einzelnen Mitarbeiter",
+    "richtig": "4",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "6",
+    "Frage": "Welche ist keine Vorgehensweise zur Aufwandsermittlung?",
+    "Ersetzungssatz": "... ist keine Vorgehensweise zur Aufwandsermittlung.",
+    "Antwort1": "Ganzheitliches Vorgehen",
+    "Antwort2": "Interpretierendes Vorgehen",
+    "Antwort3": "Vergleichendes Vorgehen",
+    "Antwort4": "Quantitatives Vorgehen",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "7",
+    "Frage":
+      "Was ist eine sehr wichtige Einflussgr\u00f6\u00dfe auf den Projektaufwand?",
+    "Ersetzungssatz":
+      "...ist eine sehr wichtige Einflussgr\u00f6\u00dfe auf den Projektaufwand.",
+    "Antwort1": "Die Menge der Prozessvarianten",
+    "Antwort2": "Der Stand der aktuellen Dokumentation",
+    "Antwort3": "Die Produktivit\u00e4t",
+    "Antwort4": "Der Wissensstand der Beteiligten",
+    "richtig": "3",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "8",
+    "Frage":
+      "Was ist keine Darstellungsm\u00f6glichkeit f\u00fcr eine Terminplanung?",
+    "Ersetzungssatz":
+      "... ist keine Darstellungsm\u00f6glichkeit f\u00fcr eine Terminplanung.",
+    "Antwort1": "CPM-Diagramm",
+    "Antwort2": "GANTT-Diagramm",
+    "Antwort3": "MPM-Diagramm",
+    "Antwort4": "PAP-Diagramm",
+    "richtig": "4",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "9",
+    "Frage":
+      "F\u00fcr was ist FAZ die Abk\u00fcrzung im Bezug auf Projektmanagement?",
+    "Ersetzungssatz":
+      "FAZ ist im Projektmanagement die Abk\u00fcrzung f\u00fcr...",
+    "Antwort1": "Frankfurter Allgemeine Zeitung",
+    "Antwort2": "F\u00fcr alle Zebras",
+    "Antwort3": "Fr\u00fchester Anfangs Zeitpunkt",
+    "Antwort4": "Flug ab Zypern",
+    "richtig": "3",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "10",
+    "Frage": "Was verwendet die Plannet-Technik zur Darstellung?",
+    "Ersetzungssatz": "Die Plannet-Technik verwendet  ... zur Darstellung.",
+    "Antwort1": "ein Balkendiagramm",
+    "Antwort2": "ein Kreisdiagramm",
+    "Antwort3": "ein S\u00e4ulendiagramm",
+    "Antwort4": "ein vernetztes Balkendiagramm",
+    "richtig": "4",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "11",
+    "Frage": "Worin zeigt sich der Nachteil der Plannet-Technik?",
+    "Ersetzungssatz": "Der Nachteil der Plannet-Technik zeigt sich ...",
+    "Antwort1": "in der Lesbarkeit",
+    "Antwort2": "in der \u00dcbersichtlickeit",
+    "Antwort3": "in der Erkennung von Abh\u00e4ngigkeiten",
+    "Antwort4": "in der zeitsynchronen Darstellung",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "12",
+    "Frage":
+      "Was muss getan werden, wenn bei einem Projekt der Anfangs-und der Endtermin festgelegt sind?",
+    "Ersetzungssatz":
+      "Wenn bei einem Projekt der Anfangs- und der Endzeitpunkt festgelegt sind, muss man ...",
+    "Antwort1": "die Kapazit\u00e4t erh\u00f6hen",
+    "Antwort2": "die Kapazit\u00e4t verringern",
+    "Antwort3": "die Produktivit\u00e4t verringern",
+    "Antwort4": "die Pausenzeit erh\u00f6hen",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "13",
+    "Frage": "Was folgt nach der Risikoerkennung?",
+    "Ersetzungssatz": "Nach der Risikoerkennung folgt ...",
+    "Antwort1": "die Planung der Risikobehandlung",
+    "Antwort2": "die Risikoanalyse",
+    "Antwort3": "die Risiko\u00fcberwachung",
+    "Antwort4": "die Risikokontrolle",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "14",
+    "Frage": "Was zeigen rote Flaggen in einer Risikoanalyse an?",
+    "Ersetzungssatz": "Rote Flaggen zeigen ... in einer Risikoanalyse an.",
+    "Antwort1": "interessante Teile des Projekts",
+    "Antwort2": "Projektteile im Verzug",
+    "Antwort3": "Risikoschwerpunkte",
+    "Antwort4": "die wichtigsten Teilprojekte",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "15",
+    "Frage": "Was wird bei der Risiko Identifikation gemacht?",
+    "Ersetzungssatz": "Bei der Risikoidentifikation ...",
+    "Antwort1": "(es) werden Risiken gefunden",
+    "Antwort2": "(es) werden Risiken dokumentiert",
+    "Antwort3":
+      "(es) werden Risiken gefunden und deren Eigenschaften dokumentiert",
+    "Antwort4": "(es) werden Eigenschaften von Risiken dokumentiert",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "16",
+    "Frage":
+      "Was folgt bei der Aufstellung von Terminen und Meilensteinen auf das Einplanen von Risikoschl\u00e4gen?",
+    "Ersetzungssatz":
+      "Bei der Aufstellung von Terminen und Meilensteinen folgt ... auf das Einplanen von Risikoschl\u00e4gen.",
+    "Antwort1": "das Zuordnen des Aufwands zum verf\u00fcgbaren Personal",
+    "Antwort2": "das Ableiten der Zeiten f\u00fcr die Aktivit\u00e4ten",
+    "Antwort3":
+      "das Durchrechnen des Zeitplans vom relativen Zeitpunkt Null aus",
+    "Antwort4":
+      "die \u00dcberarbeitung und Ber\u00fccksichtigung von Restriktionen",
+    "richtig": "2",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "17",
+    "Frage": "Wie viel Pufferzeit ist am kritischen Pfad vorhanden?",
+    "Ersetzungssatz": "Am kritischen Pfad ist ... Pufferzeit vorhanden.",
+    "Antwort1": "keine",
+    "Antwort2": "ein Tag",
+    "Antwort3": "eine Woche",
+    "Antwort4": "ein Monat",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "18",
+    "Frage": "Was z\u00e4hlt nicht zur Aufgabe des Projektmanager?",
+    "Ersetzungssatz":
+      "Der Projektmanager hat viele wichtige Aufgaben allerdings nicht",
+    "Antwort1":
+      " Brezeln, Wei\u00dfwurst und Weizen bei den Meetings bereitstellen",
+    "Antwort2": "Planen des Projekts",
+    "Antwort3": "bereit und f\u00fchrt Entscheidungen herbei",
+    "Antwort4": "dokumentiert alles",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "19",
+    "Frage": "Wie viele Meetingsregeln gibt es?",
+    "Ersetzungssatz":
+      "Bei einem Meeting ist es wichtig sich an .....Regeln zuhalten",
+    "Antwort1": "3",
+    "Antwort2": "4",
+    "Antwort3": "5",
+    "Antwort4": "6",
+    "richtig": "3",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "20",
+    "Frage": "Wie viele Phasen gibt es beim allg. Phasenmodell",
+    "Ersetzungssatz":
+      "Das allg. Phasenmodell l\u00e4sst sich in ....Phasen unterteilen",
+    "Antwort1": "4",
+    "Antwort2": "5",
+    "Antwort3": "6",
+    "Antwort4": "7",
+    "richtig": "1",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "21",
+    "Frage":
+      "Weche Person  soll im Projektmanagement helfen das Projekt voran zubringen?",
+    "Ersetzungssatz":
+      "Haupts\u00e4chlich der .....soll das Projekt voran bringen",
+    "Antwort1": "Vermittler",
+    "Antwort2": "Berater",
+    "Antwort3": "Projektverantwortliche",
+    "Antwort4": "Promoter",
+    "richtig": "4",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "22",
+    "Frage": "F\u00fcr was steht das E der Ergebnislistentechnik",
+    "Ersetzungssatz": "Das E der Ergebnislistentechnik steht f\u00fcr...",
+    "Antwort1": "Ende",
+    "Antwort2": "Ergebnis",
+    "Antwort3": "Empfehlung",
+    "Antwort4": "Ereignis",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "23",
+    "Frage": "Wann wird Projekt Managment LifeCycle(PMLC) angewandt",
+    "Ersetzungssatz": "Die PMLC Methode wird bei.... Projekten angewendet",
+    "Antwort1": "kleinen Projekten",
+    "Antwort2": "gro\u00dfen",
+    "Antwort3": "<100 000\u20ac",
+    "Antwort4": "mittleren Projekten",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "24",
+    "Frage": "Das Phasenmodell hat versch. Ziele. weches ist richtig",
+    "Ersetzungssatz":
+      "Das Phasenmodell hat versch. Ziele, eines davon ist z.B.",
+    "Antwort1": "bessere Kommunkation im Team",
+    "Antwort2": "bessere zusammen Arbeit im Team",
+    "Antwort3": "k\u00fcrzere Entwicklungsdauer",
+    "Antwort4": "bessere Kaffepausen",
+    "richtig": "3",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "25",
+    "Frage": "Wie viele versch. Menschen mit Titel gibt es in einem Projekt?",
+    "Ersetzungssatz":
+      "In einem Projekt gibt es z.B den Berater, den Promoter,....., wie viele gibt es insgesammt",
+    "Antwort1": "4",
+    "Antwort2": "5",
+    "Antwort3": "6",
+    "Antwort4": "7",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "26",
+    "Frage": "Durch was ist ein Projekt gekennzeichnet?",
+    "Ersetzungssatz":
+      "Ein Projekt ist ein Vorhaben, das unter anderem durch \u2026 gekennzeichnet ist.",
+    "Antwort1":
+      "Keine zeitlichen, finanziellen oder \u00e4hnliche Begrenzungen",
+    "Antwort2": "Wiederkehrendes Vorhaben mit selben Bedingungen",
+    "Antwort3": "Eine Zielvorgabe ",
+    "Antwort4": "Durch DIN 69901",
+    "richtig": "3",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "27",
+    "Frage":
+      "Welche der folgenden Punkte ist keine Aufgabe des Projektmanagements?",
+    "Ersetzungssatz":
+      "Projektmanagement ist ein F\u00fchrungskonzept, zu dem Projektorganisation, F\u00fchrungsmethoden und weitere F\u00fchrungsaufgaben z\u00e4hlen, nicht aber gezielt \u2026 .",
+    "Antwort1": "F\u00fchrungsaufbau (Projektorganisation)",
+    "Antwort2": "Fachliches Know-How bereitstellen",
+    "Antwort3": "Zielsetzung",
+    "Antwort4": "Steuerung und \u00dcberwachung",
+    "richtig": "2",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "28",
+    "Frage":
+      "Welcher Prozess sollte bei der Projektplanung nach der Verantwortungszuweisung folgen?",
+    "Ersetzungssatz":
+      "Vor  der Verantwortungszuweisung  sollten in der Projektplanung  die Prozesse der Projektziele, der Aktivit\u00e4tenstruktur und der Projektorganisation abgeschlossen sein, damit die \u2026  anschlie\u00dfend durchgef\u00fchrt werden kann.",
+    "Antwort1": "Terminplanung",
+    "Antwort2": "Projektorganisation",
+    "Antwort3": "Aktivit\u00e4tenstruktur",
+    "Antwort4": "Methoden- Hilfsmittelplanung ",
+    "richtig": "4",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "29",
+    "Frage": "Zielvereinbarungen sollten nicht\u2026",
+    "Ersetzungssatz":
+      "Um gute Zielvereinbarungen zu treffen, sollten gewissen Grunds\u00e4tzen, wie eine l\u00f6sungsneutrale und operationale Formulierung der Ziele, folgen, nicht aber sollten sie \u2026 .",
+    "Antwort1": "zwischen Muss-Zielen und Wunsch-Zielen nicht unterscheiden ",
+    "Antwort2": "L\u00f6sungsneutral sein",
+    "Antwort3": "die Vermeidung von Risiken beschreiben",
+    "Antwort4": "Ziele m\u00f6glichst operational formulieren",
+    "richtig": "1",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "30",
+    "Frage":
+      "Was sind die drei Hauptkriterien zur Messung des Erfolgs eines Projekts?",
+    "Ersetzungssatz":
+      "Die Hauptkriterien zur Erfolgsmessung eines Projekts sind: \u2026 .",
+    "Antwort1":
+      "Liquidit\u00e4t, Entscheidungen bei Zielkonflikten, Mitarbeiterzufriedenheit",
+    "Antwort2":
+      "Entscheidungen bei St\u00f6rungen, Einhaltung weiterer Rahmenbedingungen, Verhalten bei unvorhergesehenen Entscheidungen",
+    "Antwort3": "Sachziele, Kostenziele, Terminziele",
+    "Antwort4": "Es gibt nur zwei wirklich wichtige Kriterien",
+    "richtig": "3",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "31",
+    "Frage":
+      "Welchen Vorteil bietet der Einsatz von Projektmanagement Methoden?",
+    "Ersetzungssatz":
+      "Ein Vorteil des Einsatzes der Projektmanagement Methoden ist,  dass durch diese eine \u2026 bereitgestellt wird.",
+    "Antwort1": "Kostensteigerung",
+    "Antwort2": "Ziele und Ergebnisse sind breit gef\u00e4chert",
+    "Antwort3": "Kommunikationsgrundlage, intern wie extern ",
+    "Antwort4":
+      "Ma\u00dfnahmen zur Probleml\u00f6sung werden erst nach Eintritt des Problems erstellt",
+    "richtig": "3",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "32",
+    "Frage":
+      "Welcher Schritt ist nach der Ressourcenoptimierung zur Zielerreichung laut des Regelkreises des Projektmanagements unerl\u00e4sslich?",
+    "Ersetzungssatz":
+      "\u2026 ist nicht nur generell in der Arbeitswelt wichtig, sondern stellt auch einen entscheidenden Schritt zwischen Ressourcenoptimierung und Zielerreichung im Projektmanagement Regelkreis dar.",
+    "Antwort1": "Kommunikation",
+    "Antwort2": "Planung und Organisation",
+    "Antwort3": "Entscheidungen",
+    "Antwort4": "Marketing",
+    "richtig": "1",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "33",
+    "Frage":
+      "Welches der folgenden Begriffe ist zwar eines der 9 Wissensfelder des Projektmanagements, allerdings keines der drei wichtigsten?",
+    "Ersetzungssatz":
+      "Beschaffungsmanagement, Kommunikationsmanagement und \u2026 sind 3 der 9 Wissensfelder des Projektmanagements, allerdings keines der drei Hauptfelder.",
+    "Antwort1": "Umfangsmanagement",
+    "Antwort2": "Integrationsmanagement",
+    "Antwort3": "Qualit\u00e4tsmanagement",
+    "Antwort4": "Unfallmanagement",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "34",
+    "Frage":
+      "Welche der folgenden Fragen hilft Methoden zu finden, wie Zielvereinbarungen von Standard-Zielen kontrolliert werden k\u00f6nnen?",
+    "Ersetzungssatz":
+      "Die drei Fragen \u201eMit welcher Methode?\u201c, \u201eWie oft?\u201c, \u201e\u2026\u201c sind laut der Merkkarte f\u00fcr Zielvereinbarungen gute Anhaltspunkte um herauszufinden, wie Zielvereinbarungen von Standard-Zielen kontrolliert werden k\u00f6nnen.",
+    "Antwort1": "Wie viel?",
+    "Antwort2": "Wie kooperieren?",
+    "Antwort3": "Wie teuer?",
+    "Antwort4": "Unter welchen Voraussetzungen?",
+    "richtig": "4",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "35",
+    "Frage": "Was ist die letzte Phase im Wasserfallmodell?",
+    "Ersetzungssatz": ".... ist die letzte Phase des Wasserfallmodells",
+    "Antwort1": "Test",
+    "Antwort2": "Maintenance&Operation",
+    "Antwort3": "Implementation",
+    "Antwort4": "Aftersales",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "36",
+    "Frage":
+      "Was sollte nach Phasenmodell1 nach der Phase Revision fertig sein",
+    "Ersetzungssatz": ".... sollte nach der Revision fertig sein",
+    "Antwort1": "Benutzerhandbuch",
+    "Antwort2": "Pflichtenheft",
+    "Antwort3": "Projektabschlussbericht",
+    "Antwort4": "Abnahmeprotokoll",
+    "richtig": "3",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "37",
+    "Frage": "Was m\u00fcssen Meilensteine ungedingt haben",
+    "Ersetzungssatz": "... m\u00fcssen Meilensteine auf jeden Fall haben",
+    "Antwort1": "Datum",
+    "Antwort2": "Name",
+    "Antwort3": "Verantworlicher",
+    "Antwort4": "Bauer",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "38",
+    "Frage": "Wie ist das Wasserfallmodell aufgebaut??",
+    "Ersetzungssatz": "Die richtige Reihenfolge vom Wasserfallmodell ist.....",
+    "Antwort1":
+      "1.Problem, 2.Requierement analysis, 3.Reqiurement definition, 4.Design, 5.Implementation, 6.Test, 7.Operation&Maintenance",
+    "Antwort2":
+      "1.Problem,  2.Reqiuerement definition,  3.Reqiurenment analysis, 4.design,  5.implementation,  6.Test, 7.Operation&Maintenance",
+    "Antwort3":
+      "1.Problem, 2.Reqiuerement definition, 3.Reqiurenment analysis, 4.Implemenation, 5.Design,  6.Test, 7.Operation&Maintenance",
+    "Antwort4":
+      "1.Problem, 2.Reqiuerement definition, 3.Reqiurenment analysis, 4.Implemenation, 5.Test, 6.Design, 7.Operation&Maintenance",
+    "richtig": "1",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "39",
+    "Frage": "Ein Team ist eine ...?",
+    "Ersetzungssatz": "Was ist ein Team?",
+    "Antwort1": "hierarchiefreie Arbeitsgruppe",
+    "Antwort2": "Ansammlung von Menschen",
+    "Antwort3": "Methode zur Arbeitsverteilung",
+    "Antwort4": "Abk\u00fcrzung f\u00fcr \"TEst AutoMatisierung\"",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "40",
+    "Frage": "Was verbindet alle Mitglieder eines Teams?",
+    "Ersetzungssatz":
+      "Alle Mitglieder verbindet was von diesen M\u00f6glichkeiten? ",
+    "Antwort1": "Sie haben alle die gleiche Meinung.",
+    "Antwort2": "Jeder hat die selbe Ausbildung.",
+    "Antwort3": "Jeder hat die gleichen Qualifikationen.",
+    "Antwort4": "Jeder empfindet die Aufgabe als wichtig.",
+    "richtig": "4",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "41",
+    "Frage": "Wie ist das Phasenmodell1 aufgebaut?",
+    "Ersetzungssatz": "..... ist die Reihenfolde des Phasenmodells1.",
+    "Antwort1":
+      "1.Systemanalyse, 2.Projektdefinition, 3.Systemanalyse, 4.Implementierung, 5.Revision, 6.Inbetriebnahme, 7.Nutzung",
+    "Antwort2":
+      "1.Projektdefinition, 2.Entwurf, 3.Systemanalyse, 4.Implementierung, 5.Revision, 6.Inbetriebnahme, 7.Nutzung",
+    "Antwort3":
+      "1.Projektdefinition, 2.Entwurf, 3.Systemanalyse, 4.Implementierung, 5.Inbetriebnahme, 6.Revision, 7.Nutzung",
+    "Antwort4":
+      "1.Projektdefinition, 2.Systemanalyse, 3.Entwurf, 4.Implementierung, 5.Inbetriebnahme, 6.Revision, 7.Nutzung",
+    "richtig": "4",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "42",
+    "Frage": "Reihenfolge von ProjectManagementLifeCycle?",
+    "Ersetzungssatz": "Die richtige Reihenfolge lautet.....",
+    "Antwort1": ".....",
+    "Antwort2":
+      "1.Investigation, 2.ProcessDesign, 3.Prototype,4.PilotRelease, 5.ManufactureingRelease",
+    "Antwort3": "....",
+    "Antwort4": "....",
+    "richtig": "2",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "43",
+    "Frage":
+      "Was ist wichtig, um ein geregelten Alltag im Team zu verwirklichen?",
+    "Ersetzungssatz":
+      "Um ein geregelten Alltag im Team zu verwirklichen, ist was wichtig?",
+    "Antwort1": "Keine Regeln sind n\u00f6tig, man ist frei",
+    "Antwort2": "Absprachen sind nicht n\u00f6tig",
+    "Antwort3": "Alle Mitglieder unterwerfen sich bestimmter Normen und Regeln",
+    "Antwort4": "Konflikte werden weitestgehend vermieden",
+    "richtig": "3",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "44",
+    "Frage": "Wer erstellt das Lastenheft?",
+    "Ersetzungssatz": "Der ... erstellt das Lastenheft",
+    "Antwort1": "Auftragnehmer",
+    "Antwort2": "Auftraggeber",
+    "Antwort3": "Sekret\u00e4r",
+    "Antwort4": "Staat",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "45",
+    "Frage": "Wer erstellt das Pflichtenheft?",
+    "Ersetzungssatz": "Der ... erstellt das Pflichtenheft.",
+    "Antwort1": "Auftragnehmer",
+    "Antwort2": "Auftraggeber",
+    "Antwort3": "Sekret\u00e4r",
+    "Antwort4": "Staat",
+    "richtig": "1",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "46",
+    "Frage": "Wof\u00fcr steht ERS? ",
+    "Ersetzungssatz": "ERS steht f\u00fcr ...",
+    "Antwort1": "Eigene Referenz Spezifikation",
+    "Antwort2": "Exklusive Referenz Spezifikation",
+    "Antwort3": "Externe Referenz Spezifikation",
+    "Antwort4": "Executive Referenz Spezifikation",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "47",
+    "Frage": "Wof\u00fcr steht IRS?",
+    "Ersetzungssatz": "IRS steht f\u00fcr ...",
+    "Antwort1": "Individuelle Referenz Spezifikation",
+    "Antwort2": "Innere Referenz Spezifikation",
+    "Antwort3": "Irische Referenz Spezifikation",
+    "Antwort4": "Internationale Referenz Spezifikation",
+    "richtig": "2",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "48",
+    "Frage": "Was geh\u00f6rt nicht zu den Unterlagen der Projektplanung?",
+    "Ersetzungssatz":
+      "... geh\u00f6rt nicht zu den Unterlagen der Projektplanung.",
+    "Antwort1": "Projekttagebuch",
+    "Antwort2": "IRS",
+    "Antwort3": "ERS",
+    "Antwort4": "LRS",
+    "richtig": "4",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "49",
+    "Frage": "Was geh\u00f6rt nicht zum Project Datasheet?",
+    "Ersetzungssatz": "... geh\u00f6rt nicht zum Project Datasheet",
+    "Antwort1": "Datum",
+    "Antwort2": "Kosten",
+    "Antwort3": "Meilensteine",
+    "Antwort4": "Beteiligte",
+    "richtig": "2",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "50",
+    "Frage": "Was enth\u00e4lt ein Projektplan nicht?",
+    "Ersetzungssatz": "... geh\u00f6rt nicht zu einem Projektplan.",
+    "Antwort1": "Termineplanung",
+    "Antwort2": "Kostenplanung",
+    "Antwort3": "Ressourcenplanung",
+    "Antwort4": "Freizeitplanung",
+    "richtig": "4",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "51",
+    "Frage": "Was ist der erste Schritt bei einem Meeting? ",
+    "Ersetzungssatz": "Der erste Schritt bei einem Meeting ist ...",
+    "Antwort1": "Alle Beteiligten zu informieren",
+    "Antwort2": "Strukturieren und Steuern",
+    "Antwort3": "Zusammenfassen",
+    "Antwort4": "Intensiv planen",
+    "richtig": "4",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "52",
+    "Frage": "Was ist der Letzte Schritt bei einem Meeting? ",
+    "Ersetzungssatz": "Der letzte Schritt bei einem Meeting ist ...",
+    "Antwort1": "Alle Beteiligten zu informieren",
+    "Antwort2": "Strukturieren und Steuern",
+    "Antwort3": "Zusammenfassen",
+    "Antwort4": "Intensiv planen",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "53",
+    "Frage": "Was beschreibt das ERS?",
+    "Ersetzungssatz": "Das ERS beschreibt ...",
+    "Antwort1": "das Wunschprodukt aus Sicht des Anwenders",
+    "Antwort2": "die Risiken aus Sicht des Auftragsnehmers",
+    "Antwort3": "die ausf\u00fchrlichen Details \u00fcber die Urlaubsplanung",
+    "Antwort4": "lediglich die prognostizierten Kosten",
+    "richtig": "1",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "54",
+    "Frage": "Wie l\u00e4sst es sich effektiv im Team arbeiten?",
+    "Ersetzungssatz": "Im Team l\u00e4sst es sich wie effektiv arbeiten?",
+    "Antwort1": "Arbeiten mit Gruppenarbeitstechniken",
+    "Antwort2": "Einer entscheidet/macht alles",
+    "Antwort3": "Man trifft sich und alle reden dazwischen",
+    "Antwort4": "Man arbeitet allein",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "55",
+    "Frage": "Was beschreibt das IRS?",
+    "Ersetzungssatz": "Das IRS beschreibt ...",
+    "Antwort1": "alle Informationen \u00fcber die Pausenregelungen",
+    "Antwort2":
+      "alle Informationen \u00fcber das Gehalt des Gesch\u00e4ftsf\u00fchrers",
+    "Antwort3":
+      "alle Informationen \u00fcber die Erstellung der in der ERS beschriebenen Funktionen",
+    "Antwort4": "alle Informationen \u00fcber den Aufbau der Meetings",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "56",
+    "Frage":
+      "Wie viele Personen sollte man bei einem Ideenentwicklungs-Meeting haben?",
+    "Ersetzungssatz": ".. ist die optimale Teilnehmerzahl",
+    "Antwort1": "2-5",
+    "Antwort2": "5-8",
+    "Antwort3": "8-12",
+    "Antwort4": "12-5",
+    "richtig": "2",
+    "schwierigkeitsgrad": "3"
+  },
+  {
+    "id": "57",
+    "Frage": "Wie l\u00e4sst sich ein Meeting gut gestalten?",
+    "Ersetzungssatz":
+      "Ein Meeting l\u00e4sst sich mithilfe von welchen Methoden gut gestalten?",
+    "Antwort1": "Mithilfe von bspw. PowerPoint",
+    "Antwort2": "Mithilfe von hitzigen und unn\u00f6tigen Diskussionen",
+    "Antwort3": "Mithilfe von Essen",
+    "Antwort4": "Mithilfe von konsequentem Fehlen",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "58",
+    "Frage":
+      "Was muss unternommen werden, um eine Projektsitzung erfolgreich zu f\u00fchren?",
+    "Ersetzungssatz": "Eine erfolgreiche Projektsitzung erfordert was?",
+    "Antwort1": "Eine systematische Planung ist erforderlich",
+    "Antwort2": "Nichts",
+    "Antwort3": "Es muss f\u00fcr Essen gesorgt werden",
+    "Antwort4": "Es wird spontan entschieden, d.h. es wird kein Plan erstellt",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "59",
+    "Frage": "Was kann der Grund f\u00fcr mangelnde Teamf\u00e4higkeit sein?",
+    "Ersetzungssatz": "Ein Grund f\u00fcr mangelnde Teamf\u00e4higkeit ist?",
+    "Antwort1": "Es wird kein kostenloses Essen zur Verf\u00fcgung gestellt",
+    "Antwort2": "Teammeetings",
+    "Antwort3": "Einzelne Mitglieder",
+    "Antwort4": "Funktionierende Kommunikationsstrukturen",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "60",
+    "Frage": "Was kann der Grund f\u00fcr mangelnde Teamf\u00e4higkeit sein?",
+    "Ersetzungssatz": "Ein Grund f\u00fcr mangelnde Teamf\u00e4higkeit ist?\t",
+    "Antwort1": "Komplexe Aufgaben bzw. Projekte",
+    "Antwort2": "Kooperation",
+    "Antwort3": "Zu viel Know-How",
+    "Antwort4": "Interdisziplin\u00e4res Know-How",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "61",
+    "Frage":
+      "Was sind valide Beurteilungsma\u00dfst\u00e4be f\u00fcr die Qualit\u00e4t eines Teams?",
+    "Ersetzungssatz":
+      "Beurteilungsma\u00dfst\u00e4be f\u00fcr die Qualit\u00e4t eines Teams sind bspw.?",
+    "Antwort1": "Leistung und Erfolg",
+    "Antwort2": "Anzahl der Teammeetings",
+    "Antwort3": "Art der Kommunikationsstruktur",
+    "Antwort4": "Teamgr\u00f6\u00dfe",
+    "richtig": "1",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "62",
+    "Frage":
+      "Wie nennt sich der Stil des F\u00fchrungsverhaltens bei dem die Mitarbeiter mitwirken und entscheiden d\u00fcrfen?",
+    "Ersetzungssatz":
+      "Der ... l\u00e4sst Mitarbeiter mitwirken und entscheiden.",
+    "Antwort1": "Demokratischer Stil",
+    "Antwort2": "Autorit\u00e4rer Stil",
+    "Antwort3": "Laissez-faire Stil",
+    "Antwort4": "Autokratischer Stil",
+    "richtig": "1",
+    "schwierigkeitsgrad": "1"
+  },
+  {
+    "id": "63",
+    "Frage":
+      "Wie nennt sich der Stil des F\u00fchrungsverhaltens bei dem der Manager die Entscheidungen trifft?",
+    "Ersetzungssatz": "Der ... l\u00e4sst nur den Manager entscheiden.",
+    "Antwort1": "Demokratischer Stil",
+    "Antwort2": "Laissez-faire Stil",
+    "Antwort3": "Autorit\u00e4rer Stil",
+    "Antwort4": "Autokratischer Stil",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "64",
+    "Frage": "Was sind typische Erfolgsfaktoren in einem Team?",
+    "Ersetzungssatz": "Ein typischer Erfolgsfaktor f\u00fcr Teamarbeit ist?",
+    "Antwort1": "Jeder duzt sich",
+    "Antwort2": "Jeder arbeitet f\u00fcr sich alleine",
+    "Antwort3": "Kritik wird in Ich-Botschaften ausgedr\u00fcckt",
+    "Antwort4": "Es gibt einen Protokollanten",
+    "richtig": "3",
+    "schwierigkeitsgrad": "2"
+  },
+  {
+    "id": "83",
+    "Frage": "Reihenfolge von ProjectManagementLifeCycle?",
+    "Ersetzungssatz": "Die richtige Reihenfolge lautet.....",
+    "Antwort1": ".....",
+    "Antwort2":
+      "1.Investigation, 2.ProcessDesign, 3.Prototype,4.PilotRelease, 5.ManufactureingRelease",
+    "Antwort3": "....",
+    "Antwort4": "....",
+    "richtig": "2",
+    "schwierigkeitsgrad": "3"
+  }
+]

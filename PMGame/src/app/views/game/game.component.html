@@ -11,18 +11,21 @@
           </div>
 
           <div id="quiz__question">
-            {{ question.question }}
+            <p>
+              {{ question.Frage }}
+            </p>
           </div>
 
           <mat-radio-group id="quiz__options" [(ngModel)]="selectedAnswer">
-            <mat-radio-button class="quiz__options-radio-button" *ngFor="let option of question.options" [value]="option">
-              {{ option }}
+            <mat-radio-button class="quiz__options-radio-button" *ngFor="let option of questionOptions" [value]="option">
+              <div [ngClass]="{'quiz__correct': showingAnswer && option === questionOptions[this.question.richtig - 1]}" class="quiz__options-option">{{ option }}</div>
             </mat-radio-button>
           </mat-radio-group>
 
           <div id="quiz__buttons">
-            <button mat-button mat-raised-button color="primary" (click)="bribe()">Bestechen</button>
-            <button mat-button mat-raised-button color="primary" (click)="submit()">OK</button>
+            <button mat-button mat-raised-button color="primary" (click)="bribe()" [disabled]="showingAnswer || selectedAnswer == null">Bestechen</button>
+            <button mat-button mat-raised-button color="primary" (click)="submit()" [disabled]="showingAnswer || selectedAnswer == null">OK</button>
+            <button mat-button mat-raised-button color="primary" (click)="nextTurn()" [disabled]="!showingAnswer">Weiter</button>
           </div>
 
         </mat-card-content>
