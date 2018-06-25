@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, HostListener } from '@angular/core';
 import { MatDialogRef, MatSnackBar } from '@angular/material';
 import { MatDialog } from '@angular/material/dialog';
 import { GameControllerService } from '../../services/game-controller.service';
@@ -8,6 +8,7 @@ import { StartDialogComponent } from '../../start-dialog/start-dialog.component'
 import { WinnerDialogComponent } from '../../winner-dialog/winner-dialog.component';
 import { QuestionService } from '../../services/question.service';
 import { IQuestion } from '../../shared/question.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-game',
@@ -85,6 +86,14 @@ export class GameComponent implements OnInit, AfterViewInit {
         this.isGameOver = false;
       });
     });
+  }
+
+  @HostListener('window:beforeunload')
+  canDeactivate(): Observable<boolean> | boolean {
+    if (this.isGameOver) {
+      return true;
+    }
+    return false;
   }
 
   /**
