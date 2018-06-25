@@ -7,8 +7,7 @@ export enum Stages {
   Beschaffung,
   Realisierung,
   Einführung,
-  Abnahme,
-  Ende
+  Abnahme
 }
 
 export namespace Stages {

@@ -6,6 +6,44 @@
     <div id="quiz">
       <mat-card>
         <mat-card-content>
+
+          <div>
+
+            <svg class="quiz__difficulty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
+              <defs>
+                <style>
+                  .b {
+                    fill: rgba(231, 76, 60, 0.3);
+                  }
+                </style>
+              </defs>
+              <circle class="b" [ngClass]="{'quiz__difficulty-hard': question.schwierigkeitsgrad == 3}" cx="14.5" cy="14.5" r="14.5" />
+            </svg>
+
+            <svg class="quiz__difficulty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
+              <defs>
+                <style>
+                  .a {
+                    fill: rgba(243, 156, 18, 0.3);
+                  }
+                </style>
+              </defs>
+              <circle class="a" [ngClass]="{'quiz__difficulty-medium': question.schwierigkeitsgrad == 2}" cx="14.5" cy="14.5" r="14.5" />
+            </svg>
+
+            <svg class="quiz__difficulty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
+              <defs>
+                <style>
+                  .c {
+                    fill: rgba(46, 204, 113, 0.3);
+                  }
+                </style>
+              </defs>
+              <circle class="c" [ngClass]="{'quiz__difficulty-easy': question.schwierigkeitsgrad == 1}" cx="14.5" cy="14.5" r="14.5" />
+            </svg>
+
+          </div>
+
           <div id="quiz__header">
             <h2>Quiz</h2>
           </div>
