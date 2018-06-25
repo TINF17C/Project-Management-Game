@@ -22,7 +22,7 @@ export class GameComponent implements OnInit, AfterViewInit {
   // player objects
   players: IPlayer[];
   currentPlayer: number;
-  isGameOver : boolean;
+  isGameOver: boolean;
 
   // progress bar view
   color = 'primary';
@@ -46,7 +46,7 @@ export class GameComponent implements OnInit, AfterViewInit {
   constructor(
     public controller: GameControllerService,
     public dialog: MatDialog
-  ) { }
+  ) {}
 
   ngOnInit() {}
 
@@ -69,21 +69,19 @@ export class GameComponent implements OnInit, AfterViewInit {
    * When you click the bribe button this function is executed. It reduces money, keeps the rank and ends the turn.
    */
   bribe() {
-
     //  TODO: Check if any answer is selected.
 
-    if(this.isGameOver) {
+    if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
-      alert("Game is already over!");
+      alert('Game is already over!');
       return;
     }
 
-    if(!this.isAbleToBribe()) {
+    if (!this.isAbleToBribe()) {
       //  TODO: Show some dialog.
-      alert("Cannot bribe! Not enough money.");
+      alert('Cannot bribe! Not enough money.');
       return;
     }
-
 
     this.punishCurrentPlayer(300, false);
     this.nextTurn();
@@ -94,12 +92,11 @@ export class GameComponent implements OnInit, AfterViewInit {
    * and title and ends the turn.
    */
   submit() {
-
     //  TODO: Check if any answer is selected.
 
-    if(this.isGameOver) {
+    if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
-      alert("Game is already over!");
+      alert('Game is already over!');
       return;
     }
 
@@ -133,7 +130,7 @@ export class GameComponent implements OnInit, AfterViewInit {
   /**
    * Returns the current player.
    */
-  getCurrentPlayer() : IPlayer {
+  getCurrentPlayer(): IPlayer {
     return this.players[this.currentPlayer];
   }
 
@@ -141,14 +138,17 @@ export class GameComponent implements OnInit, AfterViewInit {
    * Checks if the correct answer is selected.
    * Note: Does not check whether no answer is selected!
    */
-  isCorrectAnswer() : boolean {
-    return this.question.options[this.question.correctAnswer - 1] === this.selectedAnswer;
+  isCorrectAnswer(): boolean {
+    return (
+      this.question.options[this.question.correctAnswer - 1] ===
+      this.selectedAnswer
+    );
   }
 
   /**
    * Checks if the player has enough money to bribe.
    */
-  isAbleToBribe() : boolean {
+  isAbleToBribe(): boolean {
     return this.getCurrentPlayer().money >= this.question.difficulty * 300;
   }
 
@@ -173,8 +173,7 @@ export class GameComponent implements OnInit, AfterViewInit {
     let player = this.getCurrentPlayer();
     let punishment = this.question.difficulty * -factor;
 
-    if(changeTitle)
-      this.controller.changePlayerTitle(player, -1);
+    if (changeTitle) this.controller.changePlayerTitle(player, -1);
 
     this.controller.changePlayerMoney(player, punishment);
   }
@@ -190,10 +189,8 @@ export class GameComponent implements OnInit, AfterViewInit {
    * This function checks who the winner is, hands that information to the winner-dialog and displays that.
    */
   gameEnds() {
-
     this.isGameOver = true;
-    let winnerString = "";
-
+    let winnerString = '';
 
     const victoryPoints = new Array(this.players.length);
     let highestPoints = 0;
@@ -218,14 +215,23 @@ export class GameComponent implements OnInit, AfterViewInit {
     // TODO: pass winnerString to the dialog somehow. This should happen here.
     this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
       data: {
-        winnerName: "Hallo"
+        winnerName: 'Hallo'
       },
       width: '400px',
       height: '400px'
     });
-
-
   }
 
-
+  /*
+  * To start the winnerdialog:
+  * winningPlayer = 'Herbert';
+  * this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
+      width: '400px',
+      height: '400px',
+      data: {
+        winningPlayer: this.winningPlayer
+      }
+    });
+  *
+  */
 }
