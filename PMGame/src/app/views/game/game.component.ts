@@ -52,6 +52,8 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   selectedAnswer: string;
 
+  trash = [];
+
   startDialogRef: MatDialogRef<StartDialogComponent>;
   winnerDialogRef: MatDialogRef<WinnerDialogComponent>;
 
@@ -220,11 +222,16 @@ export class GameComponent implements OnInit, AfterViewInit {
   fetchNewQuestion() {
     this.questionOptions = [];
     const number = Math.round(Math.random() * this.questions.length);
-    this.question = this.questions[number];
-    this.questionOptions.push(this.question.Antwort1);
-    this.questionOptions.push(this.question.Antwort2);
-    this.questionOptions.push(this.question.Antwort3);
-    this.questionOptions.push(this.question.Antwort4);
+    if (this.trash.includes(number)) {
+      this.fetchNewQuestion();
+    } else {
+      this.trash.push(number);
+      this.question = this.questions[number];
+      this.questionOptions.push(this.question.Antwort1);
+      this.questionOptions.push(this.question.Antwort2);
+      this.questionOptions.push(this.question.Antwort3);
+      this.questionOptions.push(this.question.Antwort4);
+    }
   }
 
   /**
