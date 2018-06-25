@@ -157,8 +157,8 @@ export class GameComponent implements OnInit, AfterViewInit {
    * @param factor Multiplication factor for the questions difficulty.
    */
   rewardCurrentPlayer(factor: number) {
-    let player = this.getCurrentPlayer();
-    let reward = this.question.difficulty * factor;
+    const player = this.getCurrentPlayer();
+    const reward = this.question.difficulty * factor;
 
     this.controller.changePlayerTitle(player, 1);
     this.controller.changePlayerMoney(player, reward);
@@ -170,10 +170,12 @@ export class GameComponent implements OnInit, AfterViewInit {
    * @param changeTitle Determines whether the title of the player should be reduced too.
    */
   punishCurrentPlayer(factor: number, changeTitle: boolean) {
-    let player = this.getCurrentPlayer();
-    let punishment = this.question.difficulty * -factor;
+    const player = this.getCurrentPlayer();
+    const punishment = this.question.difficulty * -factor;
 
-    if (changeTitle) this.controller.changePlayerTitle(player, -1);
+    if (changeTitle) {
+      this.controller.changePlayerTitle(player, -1);
+    }
 
     this.controller.changePlayerMoney(player, punishment);
   }
@@ -215,7 +217,7 @@ export class GameComponent implements OnInit, AfterViewInit {
     // TODO: pass winnerString to the dialog somehow. This should happen here.
     this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
       data: {
-        winnerName: 'Hallo'
+        winnerName: winnerString
       },
       width: '400px',
       height: '400px'
