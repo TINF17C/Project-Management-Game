@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlayerComponent } from './player.component';
+import { MaterialModule } from '../../../material.module';
 
 describe('PlayerComponent', () => {
   let component: PlayerComponent;
@@ -8,6 +9,7 @@ describe('PlayerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MaterialModule],
       declarations: [PlayerComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('PlayerComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PlayerComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
