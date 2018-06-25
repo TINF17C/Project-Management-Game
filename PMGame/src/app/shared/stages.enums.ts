@@ -17,7 +17,6 @@ export namespace Stages {
   }
 
   export function length(): number {
-    console.log(Object.keys(Stages).length / 2 - 1);
     return Object.keys(Stages).length / 2 - 2;
   }
 }
