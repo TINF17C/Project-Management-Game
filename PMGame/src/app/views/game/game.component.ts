@@ -221,7 +221,6 @@ export class GameComponent implements OnInit, AfterViewInit {
     this.questionOptions = [];
     const number = Math.round(Math.random() * this.questions.length);
     this.question = this.questions[number];
-    console.log(this.question);
     this.questionOptions.push(this.question.Antwort1);
     this.questionOptions.push(this.question.Antwort2);
     this.questionOptions.push(this.question.Antwort3);

@@ -18,7 +18,10 @@
 }
 .player-money-information {
   margin-bottom: 0;
-  position: relative;
+  // position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .material-icons {
   display: inline-flex;
@@ -37,9 +40,6 @@
 }
 
 .player-money-logo {
-  width: 75px;
-  position: absolute;
-  top: -25px;
-  // left: 4px;
-  right: 1rem;
+  width: 50px;
+  height: 50px;
 }
