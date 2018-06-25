@@ -37,7 +37,7 @@ export class GameComponent implements OnInit, AfterViewInit {
   question = {
     id: 0,
     Frage: '',
-    Ersatzungssatz: '',
+    Ersetzungssatz: '',
     Antwort1: '',
     Antwort2: '',
     Antwort3: '',
@@ -46,6 +46,7 @@ export class GameComponent implements OnInit, AfterViewInit {
     schwierigkeitsgrad: 0
   };
 
+  questionText = '';
   questionOptions = [];
   questions: IQuestion[];
 
@@ -230,12 +231,20 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   fetchNewQuestion() {
     this.questionOptions = [];
-    const number = Math.round(Math.random() * (this.questions.length - 1));
+    let number = Math.round(Math.random() * (this.questions.length - 1));
     if (this.trash.includes(number)) {
       this.fetchNewQuestion();
     } else {
       this.trash.push(number);
       this.question = this.questions[number];
+      number = Math.floor(Math.random() * 3) + 1;
+      console.log(number);
+      console.log(this.question);
+      if (number === 1) {
+        this.questionText = this.question.Ersetzungssatz;
+      } else {
+        this.questionText = this.question.Frage;
+      }
       this.questionOptions.push(this.question.Antwort1);
       this.questionOptions.push(this.question.Antwort2);
       this.questionOptions.push(this.question.Antwort3);

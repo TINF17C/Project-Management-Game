@@ -28,7 +28,8 @@
                   }
                 </style>
               </defs>
-              <circle class="a" [ngClass]="{'quiz__difficulty-medium': question.schwierigkeitsgrad == 2}" cx="14.5" cy="14.5" r="14.5" />
+              <circle class="a" [ngClass]="{'quiz__difficulty-medium': question.schwierigkeitsgrad == 2}" cx="14.5" cy="14.5" r="14.5"
+              />
             </svg>
 
             <svg class="quiz__difficulty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
@@ -50,7 +51,7 @@
 
           <div id="quiz__question">
             <p>
-              {{ question.Frage }}
+              {{ questionText }}
             </p>
           </div>
 
