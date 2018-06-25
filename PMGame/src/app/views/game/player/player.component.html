@@ -1,6 +1,6 @@
-<mat-card class="player-container" [ngClass]="{'player__background--selected': player.id === currentPlayer}">
+<mat-card class="player-container">
   <div class="player-content-left">
-    <h2>
+    <h2 [ngClass]="{'player__name--selected': player.id === currentPlayer}">
       <mat-icon>person</mat-icon> {{ player.player }}: {{player.title}}</h2>
     <mat-progress-bar class="player-progressBar" [color]="color" [mode]="mode" [value]=player.progress></mat-progress-bar>
   </div>

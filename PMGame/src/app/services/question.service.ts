@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { IQuestion } from '../shared/question.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionService {
-  private serverURL = 'somestring';
+  private serverURL = 'https://pmgame.sxy.one/api/';
 
   constructor(private http: HttpClient) {}
 
-  // getQuestions(): Observable<HttpResponse<IQuestion[]>> {
-  //   return this.http
-  //     .get<IQuestion[]>(this.serverURL).pipe();
-  // }
+  getQuestions(): Observable<IQuestion[]> {
+    return this.http.get<IQuestion[]>(this.serverURL);
+  }
 
   // private convertArrayResponse(
   //   res: HttpResponse<IQuestion[]>

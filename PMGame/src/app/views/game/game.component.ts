@@ -6,6 +6,8 @@ import { IPlayer } from '../../shared/player.model';
 import { Stages } from '../../shared/stages.enums';
 import { StartDialogComponent } from '../../start-dialog/start-dialog.component';
 import { WinnerDialogComponent } from '../../winner-dialog/winner-dialog.component';
+import { QuestionService } from '../../services/question.service';
+import { IQuestion } from '../../shared/question.model';
 
 @Component({
   selector: 'app-game',
@@ -32,11 +34,21 @@ export class GameComponent implements OnInit, AfterViewInit {
   stages = Stages.keys();
 
   question = {
-    question: 'Was ist der Sinn des Lebens?',
-    options: ['42', 'Gutes Essen', 'Gott', 'Feder'],
-    correctAnswer: 2,
-    difficulty: 1
+    id: 0,
+    Frage: 'string',
+    Ersatzungssatz: 'string',
+    Antwort1: 'string',
+    Antwort2: 'string',
+    Antwort3: 'string',
+    Antwort4: 'string',
+    richtig: 1,
+    schwierigkeitsgrad: 1
   };
+
+  questionOptions = [];
+  questions: IQuestion[];
+
+  showingAnswer = false;
 
   selectedAnswer: string;
 
@@ -44,11 +56,20 @@ export class GameComponent implements OnInit, AfterViewInit {
   winnerDialogRef: MatDialogRef<WinnerDialogComponent>;
 
   constructor(
+    public questionService: QuestionService,
     public controller: GameControllerService,
     public dialog: MatDialog
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.questionService.getQuestions().subscribe(
+      (res: IQuestion[]) => {
+        this.questions = res;
+        this.fetchNewQuestion();
+      },
+      (err) => console.error(err)
+    );
+  }
 
   ngAfterViewInit() {
     setTimeout(() => {
@@ -92,7 +113,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    * and title and ends the turn.
    */
   submit() {
-    //  TODO: Check if any answer is selected.
+    // //  TODO: Check if any answer is selected.
 
     if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
@@ -107,7 +128,7 @@ export class GameComponent implements OnInit, AfterViewInit {
       this.punishCurrentPlayer(100, true);
     }
 
-    this.nextTurn();
+    this.showingAnswer = true;
   }
 
   /**
@@ -123,6 +144,8 @@ export class GameComponent implements OnInit, AfterViewInit {
         this.gameEnds();
       }
     }
+
+    this.showingAnswer = false;
 
     this.fetchNewQuestion();
   }
@@ -140,8 +163,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   isCorrectAnswer(): boolean {
     return (
-      this.question.options[this.question.correctAnswer - 1] ===
-      this.selectedAnswer
+      this.selectedAnswer === this.questionOptions[this.question.richtig - 1]
     );
   }
 
@@ -149,7 +171,9 @@ export class GameComponent implements OnInit, AfterViewInit {
    * Checks if the player has enough money to bribe.
    */
   isAbleToBribe(): boolean {
-    return this.getCurrentPlayer().money >= this.question.difficulty * 300;
+    return (
+      this.getCurrentPlayer().money >= this.question.schwierigkeitsgrad * 300
+    );
   }
 
   /**
@@ -158,7 +182,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   rewardCurrentPlayer(factor: number) {
     const player = this.getCurrentPlayer();
-    const reward = this.question.difficulty * factor;
+    const reward = this.question.schwierigkeitsgrad * factor;
 
     this.controller.changePlayerTitle(player, 1);
     this.controller.changePlayerMoney(player, reward);
@@ -171,7 +195,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   punishCurrentPlayer(factor: number, changeTitle: boolean) {
     const player = this.getCurrentPlayer();
-    const punishment = this.question.difficulty * -factor;
+    const punishment = this.question.schwierigkeitsgrad * factor * -1;
 
     if (changeTitle) {
       this.controller.changePlayerTitle(player, -1);
@@ -184,7 +208,13 @@ export class GameComponent implements OnInit, AfterViewInit {
    * This function is supposed to fetch a new question from the database.
    */
   fetchNewQuestion() {
-    // TODO: Get a new question from the database and fill this.question in the correct way with it.
+    this.questionOptions = [];
+    const number = Math.floor(Math.random() * this.questions.length);
+    this.question = this.questions[number];
+    this.questionOptions.push(this.question.Antwort1);
+    this.questionOptions.push(this.question.Antwort2);
+    this.questionOptions.push(this.question.Antwort3);
+    this.questionOptions.push(this.question.Antwort4);
   }
 
   /**
