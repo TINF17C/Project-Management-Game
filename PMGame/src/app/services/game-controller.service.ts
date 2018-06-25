@@ -55,7 +55,6 @@ export class GameControllerService {
     player.titleCode = titleCode;
     player.title = Jobtitles[titleCode];
     player.progress = titleCode * (100 / Jobtitles.length());
-    console.log(player);
     return player;
   }
 
