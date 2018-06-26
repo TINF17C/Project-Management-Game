@@ -17,6 +17,10 @@ const routes: Routes = [
     canDeactivate: [CanDeactivateGuard]
   },
   {
+    path: 'start',
+    component: HomeComponent
+  },
+  {
     path: 'rules',
     component: RulesComponent
   },
