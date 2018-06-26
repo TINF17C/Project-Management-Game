@@ -18,6 +18,7 @@ import { RulesComponent } from './views/rules/rules.component';
 import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CanDeactivateGuard } from './shared/canDeactivate.class';
+import { RouterStateSnapshot, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
