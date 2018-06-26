@@ -124,7 +124,7 @@ export class GameComponent implements OnInit, AfterViewInit {
     this.snackBar.open('Der Spielleiter akzeptiert dein Angebot...', 'Psst.', {
       duration: 3000
     });
-    this.punishCurrentPlayer(300, false);
+    this.punishCurrentPlayer(200, false);
     this.nextTurn();
   }
 
