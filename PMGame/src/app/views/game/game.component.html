@@ -62,7 +62,7 @@
           </mat-radio-group>
 
           <div id="quiz__buttons">
-            <button mat-button mat-raised-button color="primary" (click)="bribe()" [disabled]="showingAnswer || selectedAnswer == null">Bestechen</button>
+            <button mat-button mat-raised-button color="primary" (click)="bribe()" [disabled]="showingAnswer || selectedAnswer == null">Bestechen ({{ question.schwierigkeitsgrad * 200 }} PM)</button>
             <button mat-button mat-raised-button color="primary" (click)="submit()" [disabled]="showingAnswer || selectedAnswer == null">OK</button>
             <button mat-button mat-raised-button color="primary" (click)="nextTurn()" [disabled]="!showingAnswer">Weiter</button>
           </div>
