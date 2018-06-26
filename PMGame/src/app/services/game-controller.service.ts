@@ -97,9 +97,6 @@ export class GameControllerService {
         progress: 0
       });
     }
-    if (players.length === 0) {
-      this.router.navigate(['start']);
-    }
     // document.getElementById('grid').appendChild(``)
     return players;
   }
