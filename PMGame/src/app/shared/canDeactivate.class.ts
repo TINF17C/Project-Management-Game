@@ -13,6 +13,11 @@ export interface ComponentCanDeactivate {
 @Injectable()
 export class CanDeactivateGuard
   implements CanDeactivate<ComponentCanDeactivate> {
+  /*
+  *
+  * This class is used to manage cases wehere users might want to move navigate away from the game class.
+  * If navigating away from the Component is not recommended it will alert the user.
+  */
   canDeactivate(
     component: ComponentCanDeactivate,
     currentRoute: ActivatedRouteSnapshot,

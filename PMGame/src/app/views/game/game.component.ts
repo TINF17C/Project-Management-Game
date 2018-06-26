@@ -79,6 +79,10 @@ export class GameComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    /**
+     * This fixes a bug that occurs in Angular Development Mode only.
+     * This bug occrs, because checkView() is performed twice.
+     */
     setTimeout(() => {
       this.startDialogRef = this.dialog.open(StartDialogComponent, {
         width: '400px',
@@ -96,6 +100,10 @@ export class GameComponent implements OnInit, AfterViewInit {
     });
   }
 
+  /**
+   * This function helps guard against unwated navigations,
+   * which would lead to information loss.
+   */
   @HostListener('window:beforeunload')
   canDeactivate(): Observable<boolean> | boolean {
     if (this.isGameOver || this.players === undefined) {
@@ -111,8 +119,6 @@ export class GameComponent implements OnInit, AfterViewInit {
    * When you click the bribe button this function is executed. It reduces money, keeps the rank and ends the turn.
    */
   bribe() {
-    //  TODO: Check if any answer is selected.
-
     if (this.isGameOver) {
       // TODO: Show Game Over dialog. Maybe start a new game?
       this.snackBar.open('Das Spiel ist bereits beendet.', 'Schade', {
@@ -144,7 +150,6 @@ export class GameComponent implements OnInit, AfterViewInit {
     // //  TODO: Check if any answer is selected.
 
     if (this.isGameOver) {
-      // TODO: Show Game Over dialog. Maybe start a new game?
       this.snackBar.open('Das Spiel ist bereits beendet.', 'Schade', {
         duration: 3000
       });
@@ -285,7 +290,6 @@ export class GameComponent implements OnInit, AfterViewInit {
       }
     }
 
-    // TODO: pass winnerString to the dialog somehow. This should happen here.
     this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
       data: {
         winnerName: winnerString
@@ -294,17 +298,4 @@ export class GameComponent implements OnInit, AfterViewInit {
       height: '400px'
     });
   }
-
-  /*
-  * To start the winnerdialog:
-  * winningPlayer = 'Herbert';
-  * this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
-      width: '400px',
-      height: '400px',
-      data: {
-        winningPlayer: this.winningPlayer
-      }
-    });
-  *
-  */
 }
