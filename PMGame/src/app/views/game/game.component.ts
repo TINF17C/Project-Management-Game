@@ -93,7 +93,7 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:beforeunload')
   canDeactivate(): Observable<boolean> | boolean {
-    if (this.isGameOver) {
+    if (this.isGameOver || this.players === undefined) {
       return true;
     }
     if (this.players.length === 0) {
