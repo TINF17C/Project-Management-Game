@@ -3,12 +3,13 @@ import { Jobtitles } from '../shared/jobtitles.enums';
 import { Stages } from '../shared/stages.enums';
 import { IPlayer } from '../shared/player.model';
 import { IGame } from '../shared/game.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameControllerService {
-  constructor() {}
+  constructor(public router: Router) {}
 
   /**
    * Sets the name of a player.
@@ -95,6 +96,9 @@ export class GameControllerService {
         money: 0,
         progress: 0
       });
+    }
+    if (players.length === 0) {
+      this.router.navigate(['start']);
     }
     // document.getElementById('grid').appendChild(``)
     return players;

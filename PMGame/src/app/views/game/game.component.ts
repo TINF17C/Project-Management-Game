@@ -96,6 +96,9 @@ export class GameComponent implements OnInit, AfterViewInit {
     if (this.isGameOver) {
       return true;
     }
+    if (this.players.length === 0) {
+      return true;
+    }
     return false;
   }
 
