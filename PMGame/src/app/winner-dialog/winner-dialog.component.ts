@@ -17,6 +17,9 @@ export class WinnerDialogComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * Force closes the dialog.
+   */
   closeDialog() {
     this.dialogRef.close();
   }

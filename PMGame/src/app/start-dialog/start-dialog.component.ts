@@ -23,6 +23,12 @@ export class StartDialogComponent implements OnInit {
     });
   }
 
+  /**
+   *
+   * @param form The form to be submitted.
+   *
+   * This Function submits the numbersOfPlayers from the form to the GameComponent.
+   */
   submit(form) {
     this.dialogRef.close(`${form.value.numberOfPlayers}`);
   }
