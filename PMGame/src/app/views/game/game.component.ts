@@ -194,7 +194,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   isAbleToBribe(): boolean {
     return (
-      this.getCurrentPlayer().money >= this.question.schwierigkeitsgrad * 300
+      this.getCurrentPlayer().money >= this.question.schwierigkeitsgrad * 200
     );
   }
 
