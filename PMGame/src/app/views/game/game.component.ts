@@ -238,8 +238,6 @@ export class GameComponent implements OnInit, AfterViewInit {
       this.trash.push(number);
       this.question = this.questions[number];
       number = Math.floor(Math.random() * 3) + 1;
-      console.log(number);
-      console.log(this.question);
       if (number === 1) {
         this.questionText = this.question.Ersetzungssatz;
       } else {
