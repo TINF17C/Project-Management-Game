@@ -6,7 +6,7 @@ export enum Jobtitles {
   Teamleiter,
   Projektleiter,
   'Assistant-Manager',
-  Manager,
+  CEO,
   Osterrieder
 }
 
