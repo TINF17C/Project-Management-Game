@@ -9,6 +9,7 @@ import { WinnerDialogComponent } from '../../winner-dialog/winner-dialog.compone
 import { QuestionService } from '../../services/question.service';
 import { IQuestion } from '../../shared/question.model';
 import { Observable } from 'rxjs';
+import { Router, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -63,7 +64,8 @@ export class GameComponent implements OnInit, AfterViewInit {
     public questionService: QuestionService,
     public controller: GameControllerService,
     public dialog: MatDialog,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -85,6 +87,9 @@ export class GameComponent implements OnInit, AfterViewInit {
 
       this.startDialogRef.afterClosed().subscribe((r) => {
         this.players = this.controller.initNewPlayers(r);
+        if (this.players.length === 0 && this.router.url !== '/rules') {
+          this.router.navigate(['']);
+        }
         this.currentPlayer = 0;
         this.isGameOver = false;
       });
