@@ -269,7 +269,8 @@ export class GameComponent implements OnInit, AfterViewInit {
     const victoryPoints = new Array(this.players.length);
     let highestPoints = 0;
     for (let i = 0; i < this.players.length; i++) {
-      victoryPoints[i] = this.players[i].money * this.players[i].titleCode;
+      victoryPoints[i] =
+        this.players[i].money + this.players[i].titleCode * 400;
       if (highestPoints < victoryPoints[i]) {
         highestPoints = victoryPoints[i];
       }
@@ -312,7 +313,7 @@ export class GameComponent implements OnInit, AfterViewInit {
   /**
    * Returns the actual css width of the building.
    */
-  getTowerWidth() {
+  getTowerWidth(): number {
     return document.getElementById('tower').offsetWidth * 0.975;
   }
 
@@ -322,7 +323,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    * @param index Player index starting at 1(!)
    * @param query dispicts the propertie the function should calculate
    */
-  getPlayerPosition(index: number, query: String) {
+  getPlayerPosition(index: number, query: String): number {
     const towerWidth = this.getTowerWidth();
 
     if (query === 'top') {
@@ -330,37 +331,41 @@ export class GameComponent implements OnInit, AfterViewInit {
 
       switch (this.players[index - 1].titleCode) {
         case 0:
-          return base;
+          return index * 20 + towerWidth * 2.17 * 0.75;
         case 1:
-          return base - towerWidth * (1 / 7);
+          return base;
         case 2:
-          return base - towerWidth * 2.17 * 0.25;
+          return base - towerWidth * (1 / 7);
         case 3:
-          return base - towerWidth * 2.17 * 0.25 - towerWidth * (1 / 7);
+          return base - towerWidth * 2.17 * 0.25;
         case 4:
-          return base - towerWidth * 2.17 * 0.5;
+          return base - towerWidth * 2.17 * 0.25 - towerWidth * (1 / 7);
         case 5:
-          return base - towerWidth * 2.17 * 0.5 - towerWidth * (1 / 7);
+          return base - towerWidth * 2.17 * 0.5;
         case 6:
-          return base - towerWidth * 2.17 * 0.75;
+          return base - towerWidth * 2.17 * 0.5 - towerWidth * (1 / 7);
         case 7:
+          return base - towerWidth * 2.17 * 0.75;
+        case 8:
           return base - towerWidth * 2.17 * 0.75 - towerWidth * (1 / 7);
       }
     } else if (query === 'left') {
       switch (this.players[index - 1].titleCode) {
         case 0:
-        case 3:
+          return -30;
+        case 1:
         case 4:
-        case 7:
+        case 5:
+        case 8:
           if (index < 3) {
             return towerWidth * 0.75 - 15;
           } else {
             return towerWidth * 0.75 + 15;
           }
-        case 1:
         case 2:
-        case 5:
+        case 3:
         case 6:
+        case 7:
           if (index < 3) {
             return towerWidth * 0.25 - 15;
           } else {
