@@ -1,13 +1,13 @@
 export enum Jobtitles {
+  Bewerber,
   Praktikant,
   Auszubildender,
   Mitarbeiter,
   'SCRUM-Master',
   Teamleiter,
   Projektleiter,
-  'Assistant-Manager',
   Manager,
-  Osterrieder
+  CEO
 }
 
 export namespace Jobtitles {

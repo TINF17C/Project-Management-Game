@@ -1,4 +1,5 @@
 export enum Stages {
+  Start,
   Initiierung,
   Zielsetzung,
   Einrichtung,
