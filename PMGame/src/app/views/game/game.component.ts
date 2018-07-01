@@ -120,6 +120,7 @@ export class GameComponent implements OnInit, AfterViewInit {
    */
   bribe() {
     if (this.isGameOver) {
+      // console.log(this.players[0]);
       // TODO: Show Game Over dialog. Maybe start a new game?
       this.snackBar.open('Das Spiel ist bereits beendet.', 'Schade', {
         duration: 3000
@@ -273,7 +274,8 @@ export class GameComponent implements OnInit, AfterViewInit {
     const victoryPoints = new Array(this.players.length);
     let highestPoints = 0;
     for (let i = 0; i < this.players.length; i++) {
-      victoryPoints[i] = this.players[i].money * this.players[i].titleCode;
+      victoryPoints[i] =
+        this.players[i].money + this.players[i].titleCode * 400;
       if (highestPoints < victoryPoints[i]) {
         highestPoints = victoryPoints[i];
       }
@@ -297,5 +299,84 @@ export class GameComponent implements OnInit, AfterViewInit {
       width: '400px',
       height: '400px'
     });
+  }
+
+  /*
+  * To start the winnerdialog:
+  * winningPlayer = 'Herbert';
+  * this.winnerDialogRef = this.dialog.open(WinnerDialogComponent, {
+      width: '400px',
+      height: '400px',
+      data: {
+        winningPlayer: this.winningPlayer
+      }
+    });
+  *
+  */
+
+  /**
+   * Returns the actual css width of the building.
+   * Makes building responsive.
+   */
+  getTowerWidth(): number {
+    return document.getElementById('tower').offsetWidth * 0.975;
+  }
+
+  /**
+   * Returns the position of a player in the building based on their job title.
+   *
+   * @param index Player index starting at 1(!)
+   * @param query dispicts the propertie the function should calculate
+   */
+  getPlayerPosition(index: number, query: String): number {
+    const towerWidth = this.getTowerWidth();
+
+    if (query === 'top') {
+      const base = towerWidth * 2 - ((index - 1) % 2) * 25;
+
+      switch (this.players[index - 1].titleCode) {
+        case 0:
+          return index * 20 + towerWidth * 2.17 * 0.75;
+        case 1:
+          return base;
+        case 2:
+          return base - towerWidth * (1 / 7);
+        case 3:
+          return base - towerWidth * 2.17 * 0.25;
+        case 4:
+          return base - towerWidth * 2.17 * 0.25 - towerWidth * (1 / 7);
+        case 5:
+          return base - towerWidth * 2.17 * 0.5;
+        case 6:
+          return base - towerWidth * 2.17 * 0.5 - towerWidth * (1 / 7);
+        case 7:
+          return base - towerWidth * 2.17 * 0.75;
+        case 8:
+          return base - towerWidth * 2.17 * 0.75 - towerWidth * (1 / 7);
+      }
+    } else if (query === 'left') {
+      switch (this.players[index - 1].titleCode) {
+        case 0:
+          return -30;
+        case 1:
+        case 4:
+        case 5:
+        case 8:
+          if (index < 3) {
+            return towerWidth * 0.25 - 15;
+          } else {
+            return towerWidth * 0.25 + 15;
+          }
+        case 2:
+        case 3:
+        case 6:
+        case 7:
+          if (index < 3) {
+            return towerWidth * 0.75 - 15;
+          } else {
+            return towerWidth * 0.75 + 15;
+          }
+      }
+    }
   }
 }

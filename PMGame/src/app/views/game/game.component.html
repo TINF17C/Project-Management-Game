@@ -1,6 +1,59 @@
 <div id="main__view">
   <div id="grid">
 
+    <div id="tower">
+      <svg class="player__circle" [ngStyle]="{'display': players && players[0] ? '' : 'none' , 'left.px': players && players[0] ? getPlayerPosition(1, 'left'):'0', 'top.px': players && players[0] ? getPlayerPosition(1,'top') : '0'}"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+        <defs>
+          <style>
+            .player-1 {
+              fill: #e74c3c;
+              border-radius: 50%;
+              box-shadow: 0 0 0 3px #e78267;
+            }
+          </style>
+        </defs>
+        <circle id="player-1" class="player-1" cx="12.5" cy="12.5" r="12.5" />
+      </svg>
+
+      <svg class="player__circle" [ngStyle]="{'display': players && players[1] ? '' : 'none' , 'left.px': players && players[1] ? getPlayerPosition(2, 'left'):'0', 'top.px': players && players[1] ? getPlayerPosition(2,'top') : '0'}"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+        <defs>
+          <style>
+            .player-2 {
+              fill: #8e44ad;
+            }
+          </style>
+        </defs>
+        <circle id="player-2" class="player-2" cx="12.5" cy="12.5" r="12.5" />
+      </svg>
+
+      <svg class="player__circle" [ngStyle]="{'display': players && players[2] ? '' : 'none' , 'left.px': players && players[2] ? getPlayerPosition(3, 'left'):'0', 'top.px': players && players[2] ? getPlayerPosition(3,'top') : '0'}"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+        <defs>
+          <style>
+            .player-3 {
+              fill: #16a085;
+            }
+          </style>
+        </defs>
+        <circle id="player-3" class="player-3" cx="12.5" cy="12.5" r="12.5" />
+      </svg>
+
+      <svg class="player__circle" [ngStyle]="{'display': players && players[3 ] ? '' : 'none' , 'left.px': players && players[3] ? getPlayerPosition(4, 'left'):'0', 'top.px': players && players[3] ? getPlayerPosition(4,'top') : '0'}"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+        <defs>
+          <style>
+            .player-4 {
+              fill: #f1c40f;
+            }
+          </style>
+        </defs>
+        <circle id="player-4" class="player-4" cx="12.5" cy="12.5" r="12.5" />
+      </svg>
+
+    </div>
+
     <app-player *ngFor="let player of players" [player]="player" [attr.id]="'player' + player.id" [currentPlayer]="currentPlayer"></app-player>
 
     <div id="quiz">
