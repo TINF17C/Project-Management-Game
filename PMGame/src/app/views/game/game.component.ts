@@ -312,6 +312,7 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   /**
    * Returns the actual css width of the building.
+   * Makes building responsive.
    */
   getTowerWidth(): number {
     return document.getElementById('tower').offsetWidth * 0.975;
@@ -358,18 +359,18 @@ export class GameComponent implements OnInit, AfterViewInit {
         case 5:
         case 8:
           if (index < 3) {
-            return towerWidth * 0.75 - 15;
+            return towerWidth * 0.25 - 15;
           } else {
-            return towerWidth * 0.75 + 15;
+            return towerWidth * 0.25 + 15;
           }
         case 2:
         case 3:
         case 6:
         case 7:
           if (index < 3) {
-            return towerWidth * 0.25 - 15;
+            return towerWidth * 0.75 - 15;
           } else {
-            return towerWidth * 0.25 + 15;
+            return towerWidth * 0.75 + 15;
           }
       }
     }
